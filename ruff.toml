@@ -1,0 +1,9 @@
+target-version = "py312"
+exclude = [".venv", "__pycache__", "specs"]
+
+[lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "E402"]
+
+[lint.per-file-ignores]
+"tests/**" = ["F811", "E702", "F841"]

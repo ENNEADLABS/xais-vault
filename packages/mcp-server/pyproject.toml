@@ -1,0 +1,23 @@
+[project]
+name = "xais-vault-mcp"
+version = "2.0.0"
+description = "MCP server exposing XAIS Vault API as tools for Claude Code"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.0.0",
+    "httpx>=0.28",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "respx>=0.22",
+]
+
+[project.scripts]
+xais-vault-mcp = "src.server:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

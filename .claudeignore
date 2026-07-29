@@ -1,0 +1,59 @@
+# .claudeignore — XAIS Vault
+# Objectif : exclure les fichiers qui consomment du contexte inutilement
+
+# === Environnement Python ===
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# === Build / Cache ===
+.next/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+dist/
+build/
+out/
+
+# === Node ===
+node_modules/
+*.lock
+package-lock.json
+pnpm-lock.yaml
+
+# === Fichiers générés ===
+*.min.js
+*.min.css
+*.map
+*.d.ts
+*.tsbuildinfo
+
+# === Data / Assets lourds ===
+*.sqlite
+*.db
+*.pdf
+
+# === Logs ===
+*.log
+logs/
+
+# === IDE / System ===
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# === CI / Docker (rarement utile en session) ===
+.github/
+docker-compose.yml
+
+# === Design reference (figé, consulter à la demande) ===
+design-reference/
+
+# === Claude internals ===
+.claude/snapshots/

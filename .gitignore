@@ -1,0 +1,65 @@
+# ─── Python ──────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.egg
+dist/
+build/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ─── Node ────────────────────────────────────────
+node_modules/
+.next/
+.turbo/
+playwright-report/
+test-results/
+.playwright-mcp/
+test-*.png
+tsconfig.tsbuildinfo
+
+# ─── Environment ─────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ─── IDE ─────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Supabase ────────────────────────────────────
+supabase/.temp/
+
+# ─── Docker ──────────────────────────────────────
+docker-compose.override.yml
+
+# ─── Design Reference ────────────────────────────
+design-reference/
+
+# ─── Screenshots & artifacts ────────────────────
+screenshots/
+coverage.json
+.ruff_cache/
+.claude/snapshots/
+.claude/worktrees/
+.claude/agents/
+.claude/rules/
+.claude/settings.json
+.claude/settings.local.json
+.claude/
+.mcp.json
+specs/review-screenshots/
+specs/
+docs/audit-*.md
+docs/security-audit.md
+docs/brand-*.md

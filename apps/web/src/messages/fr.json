@@ -1,0 +1,1032 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "appName": "XAIS Vault",
+    "errorTitle": "CONNECTION_ERROR",
+    "errorMessage": "Impossible de charger les données. Vérifiez votre connexion.",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "menu": "Menu",
+    "upgrade": "Upgrader",
+    "bannerTrialExpiring": "Votre essai expire bientôt.",
+    "bannerWorkspacesLimit": "Vous approchez de votre limite de workspaces.",
+    "bannerAnalysesLimit": "Vous approchez de votre limite d'analyses."
+  },
+  "auth": {
+    "branding": {
+      "tagline": "Intelligence documentaire",
+      "description": "Analyse automatisée de documents pour les professionnels du savoir. L'IA scanne, l'humain décide.",
+      "metricDossiers": "documents analysés",
+      "metricWorkspaces": "workspaces actifs",
+      "metricPrecision": "précision extraction",
+      "metricSpeed": "temps d'analyse",
+      "metricDossiersValue": "2.4K",
+      "metricWorkspacesValue": "147",
+      "metricPrecisionValue": "98%",
+      "metricSpeedValue": "<90s",
+      "copyright": "© 2026 XAIS"
+    },
+    "login": {
+      "title": "Connexion",
+      "descriptionPassword": "Connectez-vous avec votre email et mot de passe",
+      "descriptionMagicLink": "Recevez un lien de connexion par email",
+      "emailLabel": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "passwordLabel": "Mot de passe",
+      "submitLoading": "Connexion...",
+      "submitPassword": "Se connecter",
+      "submitMagicLink": "Envoyer le lien",
+      "switchToMagicLink": "Connexion par lien email",
+      "switchToPassword": "Connexion par mot de passe",
+      "noAccount": "Pas encore de compte ?",
+      "signupLink": "S'inscrire",
+      "checkEmail": "Vérifiez votre email",
+      "magicLinkSent": "Un lien de connexion a été envoyé à {email}"
+    },
+    "signup": {
+      "title": "Créer un compte",
+      "description": "Démarrez votre espace d'intelligence documentaire",
+      "fullNameLabel": "Nom complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "emailLabel": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "passwordLabel": "Mot de passe",
+      "confirmPasswordLabel": "Confirmer le mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "submitLoading": "Création...",
+      "submit": "Créer mon compte",
+      "hasAccount": "Déjà un compte ?",
+      "loginLink": "Se connecter",
+      "checkEmail": "Vérifiez votre email",
+      "confirmationSent": "Un lien de confirmation a été envoyé à {email}. Cliquez dessus pour activer votre compte.",
+      "defaultOrgName": "Espace de {name}"
+    }
+  },
+  "workspaces": {
+    "pageLabel": "Workspaces",
+    "title": "Workspaces",
+    "subtitle": "Vos espaces de travail",
+    "emptyState": "Vos espaces de travail apparaîtront ici.",
+    "emptyTitle": "Aucun workspace",
+    "emptyDescription": "Créez votre premier espace de travail pour commencer l'analyse.",
+    "emptyAction": "Créer un workspace",
+    "searchPlaceholder": "Rechercher un workspace...",
+    "filterAll": "Tous",
+    "filterActive": "Actifs",
+    "filterArchived": "Archivés",
+    "filterClosed": "Fermés",
+    "newWorkspace": "Nouveau Workspace",
+    "sources": "{count} source(s)",
+    "insights": "{count} point(s) clé(s)",
+    "updatedAgo": "Modifié {time}",
+    "statusActive": "Actif",
+    "statusArchived": "Archivé",
+    "statusClosed": "Fermé",
+    "scanPending": "En attente",
+    "scanScanning": "Scan en cours",
+    "scanCompleted": "Scanné",
+    "scanFailed": "Échec scan",
+    "create": {
+      "title": "Nouveau workspace",
+      "nameLabel": "Nom du workspace",
+      "namePlaceholder": "Ex : Acquisition TechCorp",
+      "emojiLabel": "Icône",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Décrivez brièvement ce dossier...",
+      "workspaceTypeLabel": "Type de workspace",
+      "workspaceTypePlaceholder": "Sélectionner un type",
+      "workspaceTypeEquity": "Equity",
+      "workspaceTypeDebt": "Debt",
+      "workspaceTypeMa": "M&A",
+      "workspaceTypeRestructuring": "Restructuring",
+      "workspaceTypeOther": "Autre",
+      "sectorLabel": "Secteur",
+      "sectorPlaceholder": "Ex : Fintech, SaaS, Santé...",
+      "targetCompanyLabel": "Entreprise cible",
+      "targetCompanyPlaceholder": "Ex : TechCorp SAS",
+      "submit": "Créer le workspace",
+      "submitting": "Création..."
+    },
+    "rename": "Renommer",
+    "renamePlaceholder": "Nouveau nom...",
+    "renameSubmit": "Renommer",
+    "delete": "Supprimer",
+    "deleteConfirmTitle": "Supprimer ce workspace ?",
+    "deleteConfirmDescription": "Cette action est irréversible. Toutes les sources, points clés et livrables seront supprimés.",
+    "deleteConfirmButton": "Supprimer",
+    "cancel": "Annuler"
+  },
+  "workspace_page": {
+    "sources": "Sources",
+    "chat": "Chat",
+    "insights": "Points clés",
+    "settings": "Paramètres",
+    "uploadSource": "Ajouter un fichier",
+    "uploadTitle": "Uploader un document",
+    "uploadDescription": "Glissez des fichiers ici ou cliquez pour sélectionner",
+    "uploadButton": "Uploader",
+    "uploadDone": "Fermer",
+    "uploadDrop": "Déposez le fichier ici",
+    "uploading": "Upload en cours...",
+    "uploadSuccess": "Fichier uploadé",
+    "uploadError": "Erreur lors de l'upload",
+    "noSources": "Aucune source ajoutée",
+    "noSourcesHint": "Uploadez des documents pour démarrer l'analyse.",
+    "statusPending": "En attente",
+    "statusProcessing": "Indexation...",
+    "statusReady": "Prêt",
+    "statusFailed": "Erreur",
+    "chatPlaceholder": "Le chat apparaîtra ici...",
+    "insightsPlaceholder": "Les points clés apparaîtront ici...",
+    "collapsePanel": "Réduire",
+    "expandSources": "Sources",
+    "expandInsights": "Points clés",
+    "headerSources": "{count} source(s)",
+    "headerInsights": "{count} point(s) clé(s)",
+    "notFound": "Workspace introuvable",
+    "notFoundHint": "Ce workspace n'existe pas ou vous n'y avez pas accès.",
+    "backToWorkspaces": "Retour aux workspaces",
+    "statusBarSources": "Sources :",
+    "statusBarReady": "{count} prêt(s)",
+    "statusBarProcessing": "{count} en cours",
+    "statusBarScan": "Scan :",
+    "searchSources": "Rechercher...",
+    "noSearchResults": "Aucun résultat",
+    "dropFilesHere": "Déposez vos fichiers ici",
+    "sourceSummary": "Résumé",
+    "sourceTopics": "Topics",
+    "sourcePages": "{count} pages",
+    "sourceWords": "{count} mots",
+    "sourceSuggestedQuestions": "Questions suggérées",
+    "askQuestion": "Poser une question",
+    "scanSource": "Scanner",
+    "topicPrompt": "Parle-moi de {topic} dans {source}",
+    "askSourcePrompt": "Que contient {source} ?",
+    "scanSourcePrompt": "Analyse en détail le document {source}",
+    "mobileTabs": {
+      "sources": "Sources",
+      "chat": "Chat",
+      "insights": "Points clés"
+    }
+  },
+  "chat": {
+    "newSession": "Nouvelle conversation",
+    "sessions": "Conversations",
+    "noSessions": "Aucune conversation",
+    "rename": "Renommer",
+    "delete": "Supprimer",
+    "deleteConfirm": "Supprimer cette conversation ?",
+    "inputPlaceholder": "Posez une question sur vos documents...",
+    "send": "Envoyer",
+    "thinking": "Réflexion en cours...",
+    "errorStream": "Erreur de connexion au serveur",
+    "citationPage": "p.{page}",
+    "loadingHistory": "Chargement de l'historique...",
+    "emptySession": "Posez votre première question pour démarrer l'analyse.",
+    "suggestions": {
+      "redFlags": "Quels sont les principaux red flags ?",
+      "financials": "Résume les projections financières",
+      "risks": "Identifie les risques majeurs",
+      "comparison": "Compare les hypothèses de revenus"
+    },
+    "renameTitle": "Renommer la conversation",
+    "renamePlaceholder": "Nouveau titre...",
+    "renameSubmit": "Renommer",
+    "sendHint": "pour envoyer",
+    "actionNote": "Sauver en note",
+    "actionBriefing": "Briefing doc",
+    "actionSummary": "Résumé",
+    "notePrompt": "Génère une note de synthèse structurée à partir des documents et de notre conversation. Inclus les points clés, risques identifiés et prochaines étapes.",
+    "summaryPrompt": "Fais un résumé exécutif complet de ce workspace : contexte, points forts, risques, métriques clés et recommandation.",
+    "briefingName": "Briefing exécutif",
+    "briefingCreated": "Briefing doc lancé — retrouvez-le dans l'onglet Livrables.",
+    "briefingError": "Impossible de lancer le briefing doc.",
+    "messageList": "Messages de conversation",
+    "loading": "Chargement des messages...",
+    "saveAsNote": "Sauvegarder comme note",
+    "close": "Fermer",
+    "smartPrompts": {
+      "howToStart": "Comment démarrer ?",
+      "howToStartPrompt": "Explique-moi comment utiliser XAIS Vault pour analyser un workspace.",
+      "processingLabel": "{count} source(s) en cours...",
+      "redFlags": "Red flags critiques",
+      "redFlagsPrompt": "Quels sont les red flags critiques détectés dans ce workspace ?",
+      "scanSummary": "Résumé du scan",
+      "scanSummaryPrompt": "Fais-moi un résumé des principaux points clés du scan.",
+      "investigations": "Synthèse investigations",
+      "investigationsPrompt": "Synthétise les résultats des investigations réalisées.",
+      "metrics": "Métriques clés",
+      "metricsPrompt": "Extrais les métriques financières clés de ce workspace.",
+      "strengths": "Points forts / faibles",
+      "strengthsPrompt": "Liste les points forts et les faiblesses de cette opportunité."
+    },
+    "focusSource": "Focus : {name}",
+    "focusClear": "Retirer le focus",
+    "feedbackPositive": "Bonne réponse",
+    "feedbackNegative": "Mauvaise réponse",
+    "feedbackSaved": "Merci pour votre feedback !",
+    "emptyStateReady": "Prêt à analyser",
+    "emptyStateContext": "{sources} sources · {pages} pages indexées",
+    "emptyStateHint": "Posez une question ou essayez :",
+    "emptyStateNoSources": "Uploadez des documents pour commencer l'analyse.",
+    "mentionSources": "Mentionner une source",
+    "contextIndicator": "Basé sur {sources} sources · {pages} pages",
+    "ragContext": {
+      "summary": "{sources} sources · {passages} passages",
+      "chunks": "passages"
+    }
+  },
+  "insights": {
+    "tabScan": "Scan",
+    "tabInvestigations": "Investigations",
+    "tabDeliverables": "Livrables",
+    "scanPending": "En attente de scan",
+    "scanScanning": "Scan en cours...",
+    "scanCompleted": "Scan terminé",
+    "scanFailed": "Échec du scan",
+    "insightsCount": "{count} point(s) clé(s) détecté(s)",
+    "filterSeverity": "Sévérité",
+    "filterStatus": "Statut",
+    "filterAll": "Tous",
+    "severityCritical": "Critique",
+    "severityHigh": "Élevée",
+    "severityMedium": "Moyenne",
+    "severityLow": "Faible",
+    "statusPending": "En attente",
+    "statusConfirmed": "Confirmé",
+    "statusRejected": "Rejeté",
+    "statusInvestigating": "En investigation",
+    "typeRedFlag": "Red Flag",
+    "typeMetric": "Métrique",
+    "typeObservation": "Observation",
+    "typeMissingInfo": "Info manquante",
+    "confidence": "Confiance",
+    "confirm": "Confirmer",
+    "reject": "Rejeter",
+    "investigate": "Investiguer",
+    "investigationLaunched": "Investigation lancée",
+    "sortSeverity": "Sévérité",
+    "sortConfidence": "Confiance",
+    "sortDate": "Date",
+    "sortType": "Type",
+    "noInsights": "Aucun point clé détecté",
+    "noInsightsHint": "Les points clés apparaîtront après le scan des sources.",
+    "citationFrom": "de {source}",
+    "citationPage": "p.{page}"
+  },
+  "deliverables": {
+    "title": "Livrables",
+    "generate": "Générer",
+    "noDeliverables": "Aucun livrable",
+    "noDeliverablesHint": "Générez un livrable pour exporter l'analyse au format DOCX.",
+    "dialogTitle": "Générer un livrable",
+    "dialogDescription": "Choisissez le type de livrable à générer.",
+    "typeLabel": "Type",
+    "typeExecutiveSummary": "Synthèse",
+    "typeInvestmentMemo": "Mémo d'analyse",
+    "typeDdReport": "Rapport complet",
+    "nameLabel": "Nom du livrable",
+    "namePlaceholder": "Ex : Synthèse — TechCorp",
+    "generateButton": "Lancer la génération",
+    "generating": "Lancement...",
+    "generationLaunched": "Génération lancée",
+    "statusPending": "En attente",
+    "statusProcessing": "Génération en cours...",
+    "statusCompleted": "Terminé",
+    "statusFailed": "Échoué",
+    "preview": "Aperçu",
+    "closePreview": "Fermer",
+    "download": "Télécharger",
+    "downloadError": "Échec du téléchargement. Réessayez.",
+    "fileSize": "Taille : {size}",
+    "step": "Étape : {step}",
+    "createdAgo": "Créé {time}",
+    "closePanel": "Fermer le panneau des points clés"
+  },
+  "investigations": {
+    "title": "Investigations",
+    "noInvestigations": "Aucune investigation",
+    "noInvestigationsHint": "Lancez une investigation depuis un point clé pour approfondir l'analyse.",
+    "statusPending": "En attente",
+    "statusProcessing": "En cours...",
+    "statusCompleted": "Terminé",
+    "statusFailed": "Échoué",
+    "scopeDocuments": "Docs",
+    "scopeWeb": "Web",
+    "scopeBoth": "Docs + Web",
+    "webSources": "Sources web",
+    "docReferences": "Références documentaires",
+    "duration": "Durée : {duration}"
+  },
+  "notes": {
+    "tabNotes": "Notes",
+    "newNote": "Nouvelle note",
+    "noNotes": "Aucune note",
+    "noNotesHint": "Créez une note pour sauvegarder vos observations et checklists.",
+    "untitled": "Sans titre",
+    "titlePlaceholder": "Titre (optionnel)",
+    "contentPlaceholder": "Écrivez votre note...",
+    "tagsPlaceholder": "Ajouter un tag...",
+    "pinned": "Épinglée",
+    "pin": "Épingler",
+    "unpin": "Désépingler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteConfirm": "Supprimer cette note ?",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "savedFromChat": "Sauvée depuis le chat",
+    "noteSaved": "Note enregistrée",
+    "noteDeleted": "Note supprimée",
+    "linkedSource": "Liée à une source",
+    "linkedInsight": "Liée à un point clé",
+    "linkedMessage": "Liée à un message",
+    "updatedAgo": "Modifiée {time}"
+  },
+  "insightDetail": {
+    "confidence": "Score de confiance",
+    "confirm": "Confirmer",
+    "reject": "Rejeter",
+    "confirmedToast": "Point clé confirmé",
+    "rejectedToast": "Point clé rejeté",
+    "investigatingToast": "Investigation lancée",
+    "linkedNotes": "Notes liées ({count})",
+    "addNote": "Ajouter une note",
+    "investigation": {
+      "title": "Investigation approfondie",
+      "questionPlaceholder": "Quelle question voulez-vous approfondir ?",
+      "scopeBoth": "Documents + Web",
+      "scopeDocuments": "Documents",
+      "scopeWeb": "Web",
+      "launch": "Lancer",
+      "launched": "Investigation lancée"
+    }
+  },
+  "studio": {
+    "label": "STUDIO",
+    "backToStudio": "Retour au Studio",
+    "tabs": {
+      "studio": "Studio",
+      "graph": "Graphe",
+      "scan": "Points clés",
+      "investigations": "Investigations",
+      "notes": "Notes"
+    },
+    "tiles": {
+      "scan": "Points clés",
+      "scanStatus": "Complété",
+      "insightsCount": "{count} point(s) clé(s)",
+      "investigations": "Investigations",
+      "invCount": "{count} active(s)",
+      "rapport": "Rapport complet",
+      "synthese": "Synthèse",
+      "matrice": "Mémo d'analyse",
+      "notes": "Notes",
+      "notesCount": "{count} note(s)",
+      "generate": "Générer",
+      "ready": "Prêt"
+    },
+    "riskDistribution": "Distribution des points clés",
+    "recentActivity": "Activité récente",
+    "uploadToStart": "Uploadez des documents pour démarrer l'analyse.",
+    "generateSection": "Générer",
+    "ddLaunch": {
+      "launch": "Lancer l'analyse",
+      "scanning": "Analyse en cours...",
+      "launched": "Analyse {mode} lancée",
+      "modeQuick": "Rapide",
+      "modeQuickDesc": "~2 min, points clés essentiels",
+      "modeStandard": "Standard",
+      "modeStandardDesc": "~5 min, analyse complète",
+      "modeDeep": "Approfondi",
+      "modeDeepDesc": "~10 min, vérification croisée"
+    },
+    "summary": {
+      "sourcesReady": "prêtes",
+      "insights": "points clés",
+      "insightsCritical": "{count} critiques",
+      "insightsHigh": "{count} importants",
+      "notes": "notes",
+      "notesPinned": "{count} épinglées",
+      "investigationsCompleted": "terminées"
+    },
+    "suggestions": {
+      "scanReady": "Vos documents sont prêts. Lancez l'analyse pour identifier les points clés.",
+      "scanAction": "Lancer l'analyse",
+      "criticalPending": "{count} points critiques en attente de revue.",
+      "criticalAction": "Voir les points clés",
+      "investigateReady": "Des points confirmés pourraient bénéficier d'une investigation approfondie.",
+      "investigateAction": "Voir les points clés",
+      "generateReady": "Toutes les analyses sont terminées. Générez un rapport.",
+      "generateAction": "Générer un rapport",
+      "addNotes": "Ajoutez des notes pour annoter vos découvertes.",
+      "addNotesAction": "Nouvelle note"
+    },
+    "graph": {
+      "title": "Graphe de connaissances",
+      "emptyTitle": "Aucune entité extraite",
+      "emptyHint": "Le graphe apparaîtra une fois vos documents indexés.",
+      "nodeCount": "{count} entités",
+      "linkCount": "{count} relations",
+      "filterByType": "Filtrer par type",
+      "askAbout": "Poser une question sur {entity}",
+      "resetView": "Recentrer",
+      "typeCompany": "Entreprise",
+      "typePerson": "Personne",
+      "typeMetric": "Métrique",
+      "typeClause": "Clause",
+      "typeDate": "Date",
+      "typeAmount": "Montant",
+      "typeOther": "Autre"
+    },
+    "suggestedQuestions": {
+      "title": "Questions à explorer"
+    },
+    "graph": {
+      "title": "Graphe de connaissances",
+      "emptyTitle": "Aucune entité extraite",
+      "emptyHint": "Le graphe apparaîtra une fois vos documents indexés.",
+      "nodeCount": "{count} entités",
+      "linkCount": "{count} relations",
+      "mentionCount": "{count} mention(s)",
+      "askAboutButton": "Poser une question",
+      "askAbout": "Parle-moi de {entity}",
+      "close": "Fermer",
+      "types": {
+        "company": "Sociétés",
+        "person": "Personnes",
+        "metric": "Métriques",
+        "clause": "Clauses",
+        "date": "Dates",
+        "amount": "Montants"
+      }
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "description": "Configurez votre espace de travail.",
+    "tabs": {
+      "profile": "Profil",
+      "organization": "Organisation",
+      "apiKeys": "Clés API",
+      "webhooks": "Webhooks",
+      "danger": "Zone de danger",
+      "billing": "Facturation",
+      "admin": "Admin"
+    },
+    "profile": {
+      "description": "Gérez vos informations personnelles.",
+      "displayName": "Nom d'affichage",
+      "displayNamePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailReadOnly": "L'email ne peut pas être modifié",
+      "avatarUrl": "URL de l'avatar",
+      "avatarUrlPlaceholder": "https://...",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "saved": "Profil mis à jour"
+    },
+    "organization": {
+      "name": "Nom de l'organisation",
+      "slug": "Identifiant",
+      "slugReadOnly": "L'identifiant ne peut pas être modifié",
+      "plan": "Plan",
+      "planStarter": "Starter",
+      "planPremium": "Premium",
+      "planTeam": "Team",
+      "planEnterprise": "Enterprise",
+      "planTrial": "Essai",
+      "members": "Membres",
+      "invite": "Inviter un membre",
+      "noMembers": "Aucun membre",
+      "roleAdmin": "Admin",
+      "roleAnalyst": "Analyste",
+      "roleViewer": "Lecteur",
+      "changeRole": "Changer le rôle",
+      "removeMember": "Retirer le membre",
+      "removeMemberConfirm": "Retirer {name} de l'organisation ?",
+      "memberRemoved": "Membre retiré",
+      "you": "(vous)",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "saved": "Organisation mise à jour",
+      "chatPersonaLabel": "Persona de l'assistant chat",
+      "chatPersonaGeneral": "Généraliste (analyse documentaire)",
+      "chatPersonaDd": "Analyste DD (PE/VC/M&A)",
+      "chatPersonaHelp": "Cadrage par défaut de l'assistant pour cette organisation. Les utilisateurs peuvent toujours préciser un autre contexte dans leurs questions.",
+      "chatPersonaSaved": "Persona mis à jour"
+    },
+    "invite": {
+      "title": "Inviter un membre",
+      "description": "Un email d'invitation sera envoyé.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "collegue@exemple.com",
+      "roleLabel": "Rôle",
+      "submit": "Envoyer l'invitation",
+      "submitting": "Envoi...",
+      "success": "Invitation envoyée",
+      "alreadyMember": "Cet utilisateur est déjà membre"
+    },
+    "apiKeys": {
+      "title": "Clés API",
+      "description": "Gérez les clés d'accès programmatique à l'API.",
+      "create": "Créer une clé",
+      "noKeys": "Aucune clé API",
+      "noKeysHint": "Créez une clé API pour accéder à l'API de façon programmatique.",
+      "nameLabel": "Nom de la clé",
+      "namePlaceholder": "Ex : CI/CD Pipeline",
+      "scopesLabel": "Scopes",
+      "scopesAll": "Tous (accès complet)",
+      "rpmLimitLabel": "Limite par minute",
+      "rpdLimitLabel": "Limite par jour",
+      "createButton": "Créer",
+      "creating": "Création...",
+      "secretTitle": "Clé créée",
+      "secretWarning": "Copiez cette clé maintenant. Elle ne sera plus jamais affichée.",
+      "copy": "Copier",
+      "copied": "Clé copiée",
+      "done": "J'ai copié la clé",
+      "active": "Active",
+      "inactive": "Inactive",
+      "lastUsed": "Dernière utilisation : {time}",
+      "neverUsed": "Jamais utilisée",
+      "edit": "Modifier",
+      "rotate": "Rotation",
+      "rotateConfirm": "La clé actuelle sera désactivée et une nouvelle sera générée. Continuer ?",
+      "rotateButton": "Confirmer la rotation",
+      "rotating": "Rotation...",
+      "revoke": "Révoquer",
+      "revokeConfirm": "Révoquer cette clé ? Elle ne pourra plus être utilisée.",
+      "revokeButton": "Révoquer",
+      "revoking": "Révocation...",
+      "revoked": "Clé révoquée",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "saved": "Clé mise à jour",
+      "prefix": "Préfixe",
+      "createdAt": "Créée {time}"
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "Recevez des notifications HTTP quand des événements se produisent dans votre espace.",
+      "create": "Ajouter un webhook",
+      "noWebhooks": "Aucun webhook configuré",
+      "noWebhooksHint": "Ajoutez un webhook pour recevoir des notifications en temps réel.",
+      "urlLabel": "URL du endpoint",
+      "urlPlaceholder": "https://exemple.com/webhook",
+      "eventsLabel": "Événements à suivre",
+      "activeLabel": "Actif",
+      "createButton": "Créer le webhook",
+      "creating": "Création...",
+      "secretTitle": "Secret du webhook",
+      "secretWarning": "Copiez ce secret maintenant. Il ne sera plus affiché. Utilisez-le pour vérifier les signatures des webhooks.",
+      "copy": "Copier",
+      "copied": "Secret copié",
+      "done": "J'ai copié le secret",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "test": "Envoyer un test",
+      "testSent": "Event de test envoyé",
+      "deliveries": "Historique des livraisons",
+      "rotateSecret": "Rotation du secret",
+      "rotateConfirm": "Le secret actuel sera invalidé et un nouveau sera généré. Tous les endpoints devront être mis à jour. Continuer ?",
+      "rotateButton": "Confirmer la rotation",
+      "rotating": "Rotation...",
+      "delete": "Supprimer",
+      "deleteConfirm": "Supprimer ce webhook ? Tout l'historique des livraisons sera perdu.",
+      "deleteButton": "Supprimer le webhook",
+      "deleting": "Suppression...",
+      "deleted": "Webhook supprimé",
+      "deliveriesTitle": "Historique des livraisons",
+      "deliveriesEmpty": "Aucune livraison",
+      "deliveryEvent": "Événement",
+      "deliveryStatus": "Statut",
+      "deliveryHttpStatus": "HTTP",
+      "deliveryDate": "Date",
+      "deliveryAttempt": "Tentative",
+      "statusDelivered": "Délivré",
+      "statusFailed": "Échoué",
+      "statusPending": "En attente",
+      "events": {
+        "source_ready": "Source prête",
+        "source_failed": "Source échouée",
+        "scan_completed": "Scan terminé",
+        "insight_created": "Point clé créé",
+        "investigation_completed": "Investigation terminée",
+        "deliverable_ready": "Livrable prêt",
+        "webhook_test": "Test"
+      }
+    },
+    "danger": {
+      "title": "Zone de danger",
+      "deleteOrg": "Supprimer l'organisation",
+      "deleteOrgDescription": "Cette action est irréversible. Tous les workspaces, sources, points clés et livrables seront définitivement supprimés.",
+      "deleteOrgConfirm": "Pour confirmer, tapez le nom de l'organisation :",
+      "deleteOrgButton": "Supprimer définitivement",
+      "deleteOrgDeleting": "Suppression...",
+      "deleteOrgSuccess": "Organisation supprimée",
+      "leaveOrg": "Quitter l'organisation",
+      "leaveOrgDescription": "Vous perdrez l'accès à tous les workspaces de cette organisation.",
+      "leaveOrgConfirm": "Êtes-vous sûr de vouloir quitter cette organisation ?",
+      "leaveOrgButton": "Quitter",
+      "leaveOrgLeaving": "Départ...",
+      "leaveOrgSuccess": "Vous avez quitté l'organisation"
+    },
+    "billing": {
+      "title": "Facturation",
+      "description": "Gérez votre abonnement et vos limites.",
+      "planLabel": "Plan actuel",
+      "upgradeToStarter": "Passer à Starter — 199€/mois",
+      "upgradeToPremium": "Passer à Premium — 299€/mois",
+      "upgradeToTeam": "Passer à Team — 499€/mois",
+      "manageSubscription": "Gérer l'abonnement",
+      "trialDaysLeft": "{days} jour(s) restant(s)",
+      "trialExpired": "Essai expiré",
+      "enterprise": "Plan Enterprise — contactez-nous pour toute modification."
+    },
+    "admin": {
+      "title": "Administration",
+      "description": "Vue d'ensemble de l'utilisation et des coûts de l'organisation.",
+      "overviewSection": "Vue d'ensemble",
+      "overviewError": "Impossible de charger les données.",
+      "members": "Membres",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Points clés",
+      "usageSection": "Utilisation (6 mois)",
+      "costsSection": "Coûts par opération",
+      "activitySection": "Activité récente",
+      "apiKeysSection": "Clés API",
+      "noUsageData": "Aucune donnée d'utilisation.",
+      "noActivity": "Aucune activité récente.",
+      "noApiKeys": "Aucune clé API configurée.",
+      "operation": "Opération",
+      "requests": "Requêtes",
+      "tokensIn": "Tokens in",
+      "tokensOut": "Tokens out",
+      "cost": "Coût",
+      "total": "Total",
+      "jobType": "Type",
+      "workspace": "Workspace",
+      "status": "Statut",
+      "date": "Date",
+      "keyName": "Nom",
+      "prefix": "Préfixe",
+      "lastUsed": "Dernière utilisation",
+      "keyStatus": "Statut",
+      "active": "Actif",
+      "inactive": "Inactif"
+    }
+  },
+  "landing": {
+    "nav": {
+      "features": "Fonctionnalités",
+      "howItWorks": "Comment ça marche",
+      "pricing": "Tarifs",
+      "cta": "Commencer"
+    },
+    "hero": {
+      "headline": "Intelligence documentaire, automatisée.",
+      "subtitle": "Uploadez vos documents. Notre IA les comprend, les relie et répond à vos questions — pour vos analyses, vos synthèses et vos rapports.",
+      "ctaPrimary": "Démarrer",
+      "ctaSecondary": "Voir comment ça marche"
+    },
+    "metrics": {
+      "docsValue": "10K+",
+      "docsLabel": "Documents analysés",
+      "timeValue": "85%",
+      "timeLabel": "Temps gagné sur l'analyse",
+      "accuracyValue": "97%",
+      "accuracyLabel": "Précision des extractions",
+      "cycleValue": "3x",
+      "cycleLabel": "Décision plus rapide"
+    },
+    "features": {
+      "label": "Fonctionnalités",
+      "title": "Tout ce qu'il faut pour comprendre vos documents",
+      "items": [
+        {
+          "title": "Scanner IA de documents",
+          "description": "Uploadez PDF, XLSX, DOCX — notre IA extrait les points clés, citations et métriques automatiquement."
+        },
+        {
+          "title": "Chat contextuel",
+          "description": "Posez des questions sur vos documents. Obtenez des réponses citées, ancrées dans vos données."
+        },
+        {
+          "title": "Extraction d'éléments clés",
+          "description": "Identifiez automatiquement les points clés, contradictions et informations manquantes dans vos sources."
+        },
+        {
+          "title": "Analyse multi-sources",
+          "description": "Croisez plusieurs documents pour révéler les contradictions et valider les hypothèses."
+        },
+        {
+          "title": "Rapports & synthèses",
+          "description": "Générez synthèses, mémos d'analyse et rapports complets en un clic, citations à l'appui."
+        },
+        {
+          "title": "Collaboration d'équipe",
+          "description": "Partagez vos espaces, assignez des rôles et collaborez avec votre équipe en temps réel."
+        }
+      ]
+    },
+    "howItWorks": {
+      "label": "Comment ça marche",
+      "title": "Des documents aux décisions en 3 étapes",
+      "steps": [
+        {
+          "title": "Uploadez",
+          "description": "Déposez vos documents — rapports, contrats, articles, notes, mémoires. Tout format."
+        },
+        {
+          "title": "Analysez",
+          "description": "L'IA scanne chaque page, extrait les points clés et organise les connaissances en un graphe interactif."
+        },
+        {
+          "title": "Décidez",
+          "description": "Explorez les points clés, chattez avec vos données, générez des rapports. Décidez plus vite."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Prêt à comprendre vos documents plus vite ?",
+      "subtitle": "Rejoignez les professionnels qui synthétisent, analysent et décident plus vite grâce à l'intelligence documentaire IA.",
+      "ctaPrimary": "Démarrer gratuitement",
+      "ctaSecondary": "Réserver une démo"
+    },
+    "pricing": {
+      "label": "Tarifs",
+      "title": "Un plan pour chaque usage",
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "yearlyDiscount": "2 mois offerts",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "starter": {
+        "name": "Starter",
+        "price": "199€",
+        "priceYearly": "1 990€",
+        "description": "Pour les chercheurs, étudiants et analystes indépendants.",
+        "f1": "5 espaces actifs",
+        "f2": "50 analyses/mois",
+        "f3": "Chat IA contextuel",
+        "f4": "Export DOCX",
+        "cta": "Démarrer avec Starter"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "299€",
+        "priceYearly": "2 990€",
+        "description": "Pour les professionnels qui traitent du volume documentaire.",
+        "f1": "10 espaces actifs",
+        "f2": "100 analyses/mois",
+        "f3": "Rapports DOCX automatiques",
+        "f4": "API & Webhooks",
+        "f5": "Priorité sur les jobs IA",
+        "cta": "Passer à Premium"
+      },
+      "team": {
+        "name": "Team",
+        "price": "499€",
+        "priceYearly": "4 990€",
+        "description": "Pour les équipes avec un flux documentaire soutenu.",
+        "f1": "20 espaces actifs",
+        "f2": "200 analyses/mois",
+        "f3": "Tout Premium inclus",
+        "f4": "Utilisateurs illimités",
+        "f5": "Support prioritaire",
+        "cta": "Choisir Team"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Sur mesure",
+        "description": "Pour les organisations avec des exigences spécifiques (DD premium, conformité, déploiement privé).",
+        "f1": "Volume illimité",
+        "f2": "SSO & SAML",
+        "f3": "SLA garanti",
+        "f4": "Support dédié",
+        "f5": "Déploiement privé possible",
+        "cta": "Contacter l'équipe"
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 XAIS · St-Raphaël, France",
+      "login": "Se connecter",
+      "contact": "Contact",
+      "privacy": "Confidentialité",
+      "terms": "CGU",
+      "legal": "Mentions légales"
+    }
+  },
+  "nav": {
+    "workspaces": "Workspaces",
+    "settings": "Paramètres",
+    "apiKeys": "Clés API",
+    "webhooks": "Webhooks",
+    "workspace": "Workspace",
+    "superAdmin": "Super Admin"
+  },
+  "userMenu": {
+    "settings": "Paramètres",
+    "logout": "Se déconnecter",
+    "language": "Langue",
+    "languageFr": "Français",
+    "languageEn": "English"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "lastUpdated": "Dernière mise à jour : 20 mars 2026",
+      "intro": "XAIS (« nous ») s'engage à protéger vos données personnelles. Cette politique décrit quelles données nous collectons, pourquoi, comment nous les utilisons et quels sont vos droits en vertu du Règlement Général sur la Protection des Données (RGPD).",
+      "sections": {
+        "dataController": {
+          "title": "Responsable du traitement",
+          "content": "XAIS SOLUCES, dont le siège social est situé à Saint-Raphaël, France. Contact : contact@xaisoluces.com. En tant que responsable du traitement, XAIS détermine les finalités et les moyens du traitement de vos données personnelles."
+        },
+        "dataCollected": {
+          "title": "Données collectées",
+          "content": "Nous collectons les données suivantes : informations de compte (nom, adresse email, mot de passe hashé) ; informations d'organisation (nom, domaine) ; documents que vous uploadez pour analyse ; métadonnées d'utilisation (actions effectuées, horodatages) ; données de facturation (gérées par Stripe, nous n'accédons pas aux données de carte bancaire) ; journaux techniques (adresses IP, user-agent, pour la sécurité et le débogage)."
+        },
+        "purpose": {
+          "title": "Finalités du traitement",
+          "content": "Vos données sont traitées aux fins suivantes : fourniture et amélioration du service d'intelligence documentaire ; analyse IA de vos documents via Claude (Anthropic) et Gemini (Google) ; gestion de votre compte et authentification ; facturation et gestion des abonnements via Stripe ; support client ; sécurité et prévention des fraudes ; statistiques d'usage agrégées et anonymisées."
+        },
+        "legalBasis": {
+          "title": "Base légale",
+          "content": "Le traitement de vos données repose sur les bases légales suivantes : exécution du contrat (art. 6.1.b RGPD) pour la fourniture du service ; intérêt légitime (art. 6.1.f RGPD) pour la sécurité et l'amélioration du service ; obligation légale (art. 6.1.c RGPD) pour la conservation des données de facturation ; consentement (art. 6.1.a RGPD) pour les cookies non essentiels, le cas échéant."
+        },
+        "retention": {
+          "title": "Durée de conservation",
+          "content": "Vos données de compte sont conservées pendant toute la durée de votre abonnement et 3 ans après sa résiliation. Les documents uploadés sont conservés le temps nécessaire à l'analyse, puis peuvent être supprimés sur demande ou à la clôture du compte. Les données de facturation sont conservées 10 ans conformément aux obligations légales françaises. Les journaux techniques sont conservés 12 mois."
+        },
+        "thirdParties": {
+          "title": "Sous-traitants et transferts",
+          "content": "Nous faisons appel aux sous-traitants suivants : Supabase Inc. (base de données et authentification, serveurs UE) ; Vercel Inc. (hébergement frontend, serveurs UE/US avec Privacy Shield) ; Render Inc. (calcul API/Worker, serveurs US) ; Stripe Inc. (paiements, serveurs UE/US, certifié PCI DSS) ; Anthropic PBC (modèle Claude pour l'analyse IA, serveurs US) ; Google LLC (modèles Gemini pour les embeddings, serveurs US). Les transferts hors UE sont encadrés par des clauses contractuelles types (CCT) ou des mécanismes équivalents."
+        },
+        "rights": {
+          "title": "Vos droits",
+          "content": "Conformément au RGPD, vous disposez des droits suivants : accès à vos données personnelles ; rectification des données inexactes ; suppression (« droit à l'oubli ») ; portabilité de vos données ; opposition au traitement ; limitation du traitement. Pour exercer ces droits, contactez-nous à contact@xaisoluces.com. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "XAIS Vault utilise uniquement des cookies strictement nécessaires au fonctionnement du service : cookie de session Supabase (authentification), préférences de langue. Nous n'utilisons pas de cookies de tracking publicitaire ni de cookies tiers à des fins marketing. Aucun consentement n'est requis pour ces cookies fonctionnels (art. 82 Loi Informatique et Libertés)."
+        },
+        "contact": {
+          "title": "Contact et DPO",
+          "content": "Pour toute question relative à la protection de vos données personnelles, contactez notre délégué à la protection des données : contact@xaisoluces.com. Nous nous engageons à répondre dans un délai de 30 jours."
+        }
+      }
+    },
+    "terms": {
+      "title": "Conditions Générales d'Utilisation",
+      "lastUpdated": "Dernière mise à jour : 20 mars 2026",
+      "intro": "Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme XAIS Vault, service d'intelligence documentaire édité par XAIS SOLUCES. En utilisant le service, vous acceptez l'intégralité de ces conditions.",
+      "sections": {
+        "definitions": {
+          "title": "Définitions",
+          "content": "« Service » désigne la plateforme XAIS Vault accessible à l'adresse xais-vault.vercel.app. « Utilisateur » désigne toute personne physique disposant d'un compte. « Organisation » désigne l'entité (entreprise, cabinet, fonds) regroupant plusieurs utilisateurs. « Contenu » désigne tout document, fichier ou donnée uploadé par l'utilisateur. « Plan » désigne la formule d'abonnement souscrite."
+        },
+        "object": {
+          "title": "Objet du service",
+          "content": "XAIS Vault est une plateforme SaaS d'intelligence documentaire destinée aux professionnels traitant du volume documentaire (chercheurs, juristes, consultants, journalistes, analystes PE/VC/M&A, product managers, étudiants, etc.). Le service permet l'analyse automatisée de documents, l'extraction de points clés, la génération de livrables (synthèses, mémos d'analyse, rapports) et la collaboration en équipe."
+        },
+        "access": {
+          "title": "Accès et inscription",
+          "content": "L'accès au service nécessite la création d'un compte avec une adresse email valide et un mot de passe. L'utilisateur est responsable de la confidentialité de ses identifiants. L'organisation peut comporter plusieurs utilisateurs avec différents rôles : Administrateur (gestion de l'organisation et des membres), Analyste (création de workspaces et upload de documents), Lecteur (consultation uniquement). L'inscription vaut acceptation des présentes CGU."
+        },
+        "subscriptions": {
+          "title": "Abonnements et facturation",
+          "content": "Le service est proposé selon plusieurs plans tarifaires (Starter, Premium, Team, Enterprise) détaillés sur la page de tarification. La facturation est mensuelle ou annuelle, via Stripe. L'abonnement se renouvelle automatiquement sauf résiliation. Un essai gratuit peut être proposé sans engagement. Les prix sont en euros, hors taxes. XAIS se réserve le droit de modifier ses tarifs avec un préavis de 30 jours."
+        },
+        "obligations": {
+          "title": "Obligations de l'utilisateur",
+          "content": "L'utilisateur s'engage à : utiliser le service conformément à sa destination (analyse documentaire professionnelle) ; ne pas tenter de contourner les mesures de sécurité ou de reverse-engineerer le service ; ne pas uploader de documents illicites, portant atteinte à des droits de tiers ou contenant des malwares ; respecter les limites de son plan (nombre de workspaces, sources, analyses) ; maintenir la confidentialité de son compte."
+        },
+        "intellectualProperty": {
+          "title": "Propriété intellectuelle",
+          "content": "XAIS conserve l'intégralité des droits de propriété intellectuelle sur le service, son code, ses interfaces et ses marques. L'utilisateur conserve l'intégralité des droits sur les documents qu'il uploade. XAIS obtient une licence limitée, non exclusive et révocable pour traiter ces documents dans le seul but de fournir le service. Les livrables générés appartiennent à l'utilisateur."
+        },
+        "liability": {
+          "title": "Responsabilité et avertissements IA",
+          "content": "XAIS Vault est un outil d'aide à la décision. Les analyses et livrables générés par l'intelligence artificielle ne constituent pas un conseil juridique, financier ou d'investissement. L'utilisateur assume l'entière responsabilité des décisions prises sur la base des analyses produites. La responsabilité de XAIS est limitée au montant des sommes versées au cours des 12 derniers mois. XAIS ne saurait être tenu responsable des interruptions de service ou pertes de données au-delà des engagements de SLA."
+        },
+        "termination": {
+          "title": "Résiliation",
+          "content": "L'utilisateur peut résilier son abonnement à tout moment depuis les paramètres du compte. La résiliation prend effet à la fin de la période en cours. XAIS peut suspendre ou résilier un compte en cas de violation des CGU, avec notification préalable sauf urgence. À la résiliation, les données sont conservées 30 jours puis supprimées, sauf obligation légale contraire."
+        },
+        "applicableLaw": {
+          "title": "Droit applicable et juridiction",
+          "content": "Les présentes CGU sont régies par le droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable. À défaut, le tribunal compétent sera celui du ressort du siège social de XAIS SOLUCES (Var, France), sauf disposition légale impérative contraire."
+        }
+      }
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "lastUpdated": "Dernière mise à jour : 20 mars 2026",
+      "sections": {
+        "editor": {
+          "title": "Éditeur du site",
+          "content": "Le site xais-vault.vercel.app est édité par XAIS SOLUCES, domiciliée à Saint-Raphaël, Var, France. Direction de la publication : XAIS SOLUCES (contact@xaisoluces.com). Les informations légales complémentaires (numéro SIRET, forme juridique) sont disponibles sur demande à contact@xaisoluces.com."
+        },
+        "hosting": {
+          "title": "Hébergement",
+          "content": "Frontend : Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA (vercel.com). API et Worker : Render Inc., 525 Brannan Street Suite 300, San Francisco, CA 94107, USA (render.com). Base de données : Supabase Inc., 970 Toa Payoh North, Singapore (supabase.com), données hébergées dans la région Europe (eu-central-1)."
+        },
+        "intellectualProperty": {
+          "title": "Propriété intellectuelle",
+          "content": "L'ensemble du contenu de ce site (textes, images, interfaces, code source, marques, logos) est protégé par le droit d'auteur et appartient à XAIS SOLUCES ou à ses partenaires. Toute reproduction, représentation ou diffusion, en tout ou partie, sans autorisation écrite préalable est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété Intellectuelle."
+        },
+        "personalData": {
+          "title": "Données personnelles",
+          "content": "Le traitement des données personnelles collectées via ce site est décrit dans notre Politique de confidentialité, accessible à l'adresse /privacy. Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits : contact@xaisoluces.com."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Ce site utilise uniquement des cookies fonctionnels nécessaires à l'authentification et aux préférences utilisateur. Aucun cookie de tracking ou de publicité ciblée n'est utilisé. Pour plus d'informations, consultez notre Politique de confidentialité."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "Pour toute question relative à ce site ou à nos services : contact@xaisoluces.com. XAIS SOLUCES, Saint-Raphaël, Var, France."
+        }
+      }
+    }
+  },
+  "superAdmin": {
+    "title": "Super Admin",
+    "loading": "Chargement...",
+    "accessDenied": "Accès refusé — Super-admin uniquement",
+    "tabs": {
+      "activity": "Activité",
+      "health": "Santé",
+      "summarization": "Summarization",
+      "overview": "Vue d'ensemble"
+    },
+    "overview": {
+      "loading": "Chargement...",
+      "activeOrgs": "Orgs actives (7j)",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Points clés",
+      "deliverables": "Livrables",
+      "chatMessages": "Messages chat",
+      "failedJobs24h": "Jobs échoués (24h)",
+      "successRate7d": "Taux de succès (7j)"
+    },
+    "orgTable": {
+      "loading": "Chargement...",
+      "name": "Organisation",
+      "plan": "Plan",
+      "members": "Membres",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Points clés",
+      "messages": "Messages",
+      "deliverables": "Livrables",
+      "lastActivity": "Dernière activité",
+      "empty": "Aucune organisation"
+    },
+    "activity": {
+      "loading": "Chargement...",
+      "allTypes": "Tous les types",
+      "allOrgs": "Toutes les orgs",
+      "empty": "Aucune activité récente"
+    },
+    "userTable": {
+      "title": "Activité par utilisateur",
+      "loading": "Chargement...",
+      "email": "Utilisateur",
+      "org": "Organisation",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "messages": "Messages",
+      "lastActive": "Dernier actif",
+      "allOrgs": "Toutes les orgs",
+      "empty": "Aucun utilisateur"
+    },
+    "summarization": {
+      "loading": "Chargement...",
+      "totalCount": "Summarizations totales",
+      "count24h": "24h",
+      "totalCost": "Coût total",
+      "avgCost": "Coût moyen",
+      "avgInputTokens": "Tokens input moy.",
+      "avgOutputTokens": "Tokens output moy.",
+      "alertThreshold": "Seuil d'alerte dépassé",
+      "noData": "Aucune summarization enregistrée"
+    },
+    "health": {
+      "loading": "Chargement...",
+      "successRate": "Taux de succès des jobs (7 jours)",
+      "failedJobs24h": "Jobs échoués (24h)",
+      "errorLog": "Journal des erreurs",
+      "noErrors": "Aucune erreur récente",
+      "type": "Type",
+      "org": "Organisation",
+      "workspace": "Workspace",
+      "error": "Erreur",
+      "attempts": "Tentatives",
+      "date": "Date"
+    }
+  }
+}

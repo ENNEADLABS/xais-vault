@@ -1,0 +1,14 @@
+[extend]
+useDefault = true
+
+[[rules]]
+id = "stripe-webhook-secret"
+description = "Stripe webhook signing secret"
+regex = '''\bwhsec_[A-Za-z0-9_]{16,}\b'''
+keywords = ["whsec_"]
+
+[rules.allowlist]
+regexTarget = "match"
+regexes = [
+  '''(?i)\bwhsec_(?:test|fake|example|placeholder)[A-Za-z0-9_]*\b''',
+]

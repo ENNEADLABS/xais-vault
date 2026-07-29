@@ -1,0 +1,1032 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "appName": "XAIS Vault",
+    "errorTitle": "CONNECTION_ERROR",
+    "errorMessage": "Unable to load data. Check your connection.",
+    "retry": "Retry",
+    "close": "Close",
+    "menu": "Menu",
+    "upgrade": "Upgrade",
+    "bannerTrialExpiring": "Your trial is expiring soon.",
+    "bannerWorkspacesLimit": "You are approaching your workspaces limit.",
+    "bannerAnalysesLimit": "You are approaching your analyses limit."
+  },
+  "auth": {
+    "branding": {
+      "tagline": "Document intelligence",
+      "description": "Automated document analysis for knowledge professionals. AI scans, humans decide.",
+      "metricDossiers": "documents analyzed",
+      "metricWorkspaces": "active workspaces",
+      "metricPrecision": "extraction accuracy",
+      "metricSpeed": "analysis time",
+      "metricDossiersValue": "2.4K",
+      "metricWorkspacesValue": "147",
+      "metricPrecisionValue": "98%",
+      "metricSpeedValue": "<90s",
+      "copyright": "© 2026 XAIS"
+    },
+    "login": {
+      "title": "Sign in",
+      "descriptionPassword": "Sign in with your email and password",
+      "descriptionMagicLink": "Get a sign-in link by email",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "submitLoading": "Signing in...",
+      "submitPassword": "Sign in",
+      "submitMagicLink": "Send link",
+      "switchToMagicLink": "Sign in with email link",
+      "switchToPassword": "Sign in with password",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up",
+      "checkEmail": "Check your email",
+      "magicLinkSent": "A sign-in link has been sent to {email}"
+    },
+    "signup": {
+      "title": "Create an account",
+      "description": "Start your document intelligence workspace",
+      "fullNameLabel": "Full name",
+      "fullNamePlaceholder": "John Smith",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm password",
+      "passwordMismatch": "Passwords do not match",
+      "submitLoading": "Creating...",
+      "submit": "Create my account",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "checkEmail": "Check your email",
+      "confirmationSent": "A confirmation link has been sent to {email}. Click it to activate your account.",
+      "defaultOrgName": "{name}'s workspace"
+    }
+  },
+  "workspaces": {
+    "pageLabel": "Workspaces",
+    "title": "Workspaces",
+    "subtitle": "Your workspaces",
+    "emptyState": "Your workspaces will appear here.",
+    "emptyTitle": "No workspaces yet",
+    "emptyDescription": "Create your first workspace to start analyzing.",
+    "emptyAction": "Create a workspace",
+    "searchPlaceholder": "Search workspaces...",
+    "filterAll": "All",
+    "filterActive": "Active",
+    "filterArchived": "Archived",
+    "filterClosed": "Closed",
+    "newWorkspace": "New Workspace",
+    "sources": "{count} source(s)",
+    "insights": "{count} insight(s)",
+    "updatedAgo": "Updated {time}",
+    "statusActive": "Active",
+    "statusArchived": "Archived",
+    "statusClosed": "Closed",
+    "scanPending": "Pending",
+    "scanScanning": "Scanning",
+    "scanCompleted": "Scanned",
+    "scanFailed": "Scan failed",
+    "create": {
+      "title": "New workspace",
+      "nameLabel": "Workspace name",
+      "namePlaceholder": "E.g., TechCorp Acquisition",
+      "emojiLabel": "Icon",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Briefly describe this file...",
+      "workspaceTypeLabel": "Workspace type",
+      "workspaceTypePlaceholder": "Select a type",
+      "workspaceTypeEquity": "Equity",
+      "workspaceTypeDebt": "Debt",
+      "workspaceTypeMa": "M&A",
+      "workspaceTypeRestructuring": "Restructuring",
+      "workspaceTypeOther": "Other",
+      "sectorLabel": "Sector",
+      "sectorPlaceholder": "E.g., Fintech, SaaS, Healthcare...",
+      "targetCompanyLabel": "Target company",
+      "targetCompanyPlaceholder": "E.g., TechCorp SAS",
+      "submit": "Create workspace",
+      "submitting": "Creating..."
+    },
+    "rename": "Rename",
+    "renamePlaceholder": "New name...",
+    "renameSubmit": "Rename",
+    "delete": "Delete",
+    "deleteConfirmTitle": "Delete this workspace?",
+    "deleteConfirmDescription": "This action is irreversible. All sources, insights and deliverables will be deleted.",
+    "deleteConfirmButton": "Delete",
+    "cancel": "Cancel"
+  },
+  "workspace_page": {
+    "sources": "Sources",
+    "chat": "Chat",
+    "insights": "Insights",
+    "settings": "Settings",
+    "uploadSource": "Add file",
+    "uploadTitle": "Upload document",
+    "uploadDescription": "Drag files here or click to select",
+    "uploadButton": "Upload",
+    "uploadDone": "Close",
+    "uploadDrop": "Drop file here",
+    "uploading": "Uploading...",
+    "uploadSuccess": "File uploaded",
+    "uploadError": "Upload error",
+    "noSources": "No sources added",
+    "noSourcesHint": "Upload documents to start analysis.",
+    "statusPending": "Pending",
+    "statusProcessing": "Indexing...",
+    "statusReady": "Ready",
+    "statusFailed": "Error",
+    "chatPlaceholder": "Chat will appear here...",
+    "insightsPlaceholder": "Insights will appear here...",
+    "collapsePanel": "Collapse",
+    "expandSources": "Sources",
+    "expandInsights": "Insights",
+    "headerSources": "{count} source(s)",
+    "headerInsights": "{count} insight(s)",
+    "notFound": "Workspace not found",
+    "notFoundHint": "This workspace doesn't exist or you don't have access.",
+    "backToWorkspaces": "Back to workspaces",
+    "statusBarSources": "Sources:",
+    "statusBarReady": "{count} ready",
+    "statusBarProcessing": "{count} processing",
+    "statusBarScan": "Scan:",
+    "searchSources": "Search...",
+    "noSearchResults": "No results",
+    "dropFilesHere": "Drop your files here",
+    "sourceSummary": "Summary",
+    "sourceTopics": "Topics",
+    "sourcePages": "{count} pages",
+    "sourceWords": "{count} words",
+    "sourceSuggestedQuestions": "Suggested questions",
+    "askQuestion": "Ask a question",
+    "scanSource": "Scan",
+    "topicPrompt": "Tell me about {topic} in {source}",
+    "askSourcePrompt": "What does {source} contain?",
+    "scanSourcePrompt": "Analyze the document {source} in detail",
+    "mobileTabs": {
+      "sources": "Sources",
+      "chat": "Chat",
+      "insights": "Insights"
+    }
+  },
+  "chat": {
+    "newSession": "New conversation",
+    "sessions": "Conversations",
+    "noSessions": "No conversations",
+    "rename": "Rename",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this conversation?",
+    "inputPlaceholder": "Ask a question about your documents...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "errorStream": "Server connection error",
+    "citationPage": "p.{page}",
+    "loadingHistory": "Loading history...",
+    "emptySession": "Ask your first question to start the analysis.",
+    "suggestions": {
+      "redFlags": "What are the main red flags?",
+      "financials": "Summarize the financial projections",
+      "risks": "Identify the major risks",
+      "comparison": "Compare the revenue assumptions"
+    },
+    "renameTitle": "Rename conversation",
+    "renamePlaceholder": "New title...",
+    "renameSubmit": "Rename",
+    "sendHint": "to send",
+    "actionNote": "Save as note",
+    "actionBriefing": "Briefing doc",
+    "actionSummary": "Summary",
+    "notePrompt": "Generate a structured synthesis note from the documents and our conversation. Include key points, identified risks and next steps.",
+    "summaryPrompt": "Provide a complete executive summary of this workspace: context, strengths, risks, key metrics and recommendation.",
+    "briefingName": "Executive briefing",
+    "briefingCreated": "Briefing doc started — find it in the Deliverables tab.",
+    "briefingError": "Could not start the briefing doc.",
+    "messageList": "Chat messages",
+    "loading": "Loading messages...",
+    "saveAsNote": "Save as note",
+    "close": "Close",
+    "smartPrompts": {
+      "howToStart": "How to start?",
+      "howToStartPrompt": "Explain how to use XAIS Vault to analyze a workspace.",
+      "processingLabel": "{count} source(s) processing...",
+      "redFlags": "Critical red flags",
+      "redFlagsPrompt": "What are the critical red flags detected in this workspace?",
+      "scanSummary": "Scan summary",
+      "scanSummaryPrompt": "Give me a summary of the main insights from the scan.",
+      "investigations": "Investigations summary",
+      "investigationsPrompt": "Summarize the results of the investigations performed.",
+      "metrics": "Key metrics",
+      "metricsPrompt": "Extract the key financial metrics from this workspace.",
+      "strengths": "Strengths / weaknesses",
+      "strengthsPrompt": "List the strengths and weaknesses of this opportunity."
+    },
+    "focusSource": "Focus: {name}",
+    "focusClear": "Remove focus",
+    "feedbackPositive": "Good answer",
+    "feedbackNegative": "Bad answer",
+    "feedbackSaved": "Thanks for your feedback!",
+    "emptyStateReady": "Ready to analyze",
+    "emptyStateContext": "{sources} sources · {pages} pages indexed",
+    "emptyStateHint": "Ask a question or try:",
+    "emptyStateNoSources": "Upload documents to start the analysis.",
+    "mentionSources": "Mention a source",
+    "contextIndicator": "Based on {sources} sources · {pages} pages",
+    "ragContext": {
+      "summary": "{sources} sources · {passages} passages",
+      "chunks": "passages"
+    }
+  },
+  "insights": {
+    "tabScan": "Scan",
+    "tabInvestigations": "Investigations",
+    "tabDeliverables": "Deliverables",
+    "scanPending": "Waiting for scan",
+    "scanScanning": "Scanning...",
+    "scanCompleted": "Scan completed",
+    "scanFailed": "Scan failed",
+    "insightsCount": "{count} insight(s) detected",
+    "filterSeverity": "Severity",
+    "filterStatus": "Status",
+    "filterAll": "All",
+    "severityCritical": "Critical",
+    "severityHigh": "High",
+    "severityMedium": "Medium",
+    "severityLow": "Low",
+    "statusPending": "Pending",
+    "statusConfirmed": "Confirmed",
+    "statusRejected": "Rejected",
+    "statusInvestigating": "Investigating",
+    "typeRedFlag": "Red Flag",
+    "typeMetric": "Metric",
+    "typeObservation": "Observation",
+    "typeMissingInfo": "Missing Info",
+    "confidence": "Confidence",
+    "confirm": "Confirm",
+    "reject": "Reject",
+    "investigate": "Investigate",
+    "investigationLaunched": "Investigation launched",
+    "sortSeverity": "Severity",
+    "sortConfidence": "Confidence",
+    "sortDate": "Date",
+    "sortType": "Type",
+    "noInsights": "No insights detected",
+    "noInsightsHint": "Insights will appear after scanning sources.",
+    "citationFrom": "from {source}",
+    "citationPage": "p.{page}"
+  },
+  "deliverables": {
+    "title": "Deliverables",
+    "generate": "Generate",
+    "noDeliverables": "No deliverables",
+    "noDeliverablesHint": "Generate a deliverable to export the analysis as DOCX.",
+    "dialogTitle": "Generate a deliverable",
+    "dialogDescription": "Choose the type of deliverable to generate.",
+    "typeLabel": "Type",
+    "typeExecutiveSummary": "Summary",
+    "typeInvestmentMemo": "Analysis Memo",
+    "typeDdReport": "Full Report",
+    "nameLabel": "Deliverable name",
+    "namePlaceholder": "E.g., Summary — TechCorp",
+    "generateButton": "Start generation",
+    "generating": "Starting...",
+    "generationLaunched": "Generation started",
+    "statusPending": "Pending",
+    "statusProcessing": "Generating...",
+    "statusCompleted": "Completed",
+    "statusFailed": "Failed",
+    "preview": "Preview",
+    "closePreview": "Close",
+    "download": "Download",
+    "downloadError": "Download failed. Please try again.",
+    "fileSize": "Size: {size}",
+    "step": "Step: {step}",
+    "createdAgo": "Created {time}",
+    "closePanel": "Close insights panel"
+  },
+  "investigations": {
+    "title": "Investigations",
+    "noInvestigations": "No investigations",
+    "noInvestigationsHint": "Launch an investigation from an insight to deepen the analysis.",
+    "statusPending": "Pending",
+    "statusProcessing": "Processing...",
+    "statusCompleted": "Completed",
+    "statusFailed": "Failed",
+    "scopeDocuments": "Docs",
+    "scopeWeb": "Web",
+    "scopeBoth": "Docs + Web",
+    "webSources": "Web sources",
+    "docReferences": "Document references",
+    "duration": "Duration: {duration}"
+  },
+  "notes": {
+    "tabNotes": "Notes",
+    "newNote": "New note",
+    "noNotes": "No notes",
+    "noNotesHint": "Create a note to save observations and checklists.",
+    "untitled": "Untitled",
+    "titlePlaceholder": "Title (optional)",
+    "contentPlaceholder": "Write your note...",
+    "tagsPlaceholder": "Add a tag...",
+    "pinned": "Pinned",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this note?",
+    "save": "Save",
+    "cancel": "Cancel",
+    "savedFromChat": "Saved from chat",
+    "noteSaved": "Note saved",
+    "noteDeleted": "Note deleted",
+    "linkedSource": "Linked to source",
+    "linkedInsight": "Linked to insight",
+    "linkedMessage": "Linked to message",
+    "updatedAgo": "Updated {time}"
+  },
+  "insightDetail": {
+    "confidence": "Confidence score",
+    "confirm": "Confirm",
+    "reject": "Reject",
+    "confirmedToast": "Insight confirmed",
+    "rejectedToast": "Insight rejected",
+    "investigatingToast": "Investigation launched",
+    "linkedNotes": "Linked notes ({count})",
+    "addNote": "Add a note",
+    "investigation": {
+      "title": "Deep investigation",
+      "questionPlaceholder": "What question do you want to investigate?",
+      "scopeBoth": "Documents + Web",
+      "scopeDocuments": "Documents",
+      "scopeWeb": "Web",
+      "launch": "Launch",
+      "launched": "Investigation launched"
+    }
+  },
+  "studio": {
+    "label": "STUDIO",
+    "backToStudio": "Back to Studio",
+    "tabs": {
+      "studio": "Studio",
+      "graph": "Graph",
+      "scan": "Insights",
+      "investigations": "Investigations",
+      "notes": "Notes"
+    },
+    "tiles": {
+      "scan": "Key insights",
+      "scanStatus": "Completed",
+      "insightsCount": "{count} insight(s)",
+      "investigations": "Investigations",
+      "invCount": "{count} active",
+      "rapport": "Full Report",
+      "synthese": "Summary",
+      "matrice": "Analysis Memo",
+      "notes": "Notes",
+      "notesCount": "{count} note(s)",
+      "generate": "Generate",
+      "ready": "Ready"
+    },
+    "riskDistribution": "Insights distribution",
+    "recentActivity": "Recent Activity",
+    "uploadToStart": "Upload documents to start the analysis.",
+    "generateSection": "Generate",
+    "ddLaunch": {
+      "launch": "Run analysis",
+      "scanning": "Analyzing...",
+      "launched": "{mode} analysis started",
+      "modeQuick": "Quick",
+      "modeQuickDesc": "~2 min, key insights",
+      "modeStandard": "Standard",
+      "modeStandardDesc": "~5 min, full analysis",
+      "modeDeep": "Deep",
+      "modeDeepDesc": "~10 min, cross-verification"
+    },
+    "summary": {
+      "sourcesReady": "ready",
+      "insights": "insights",
+      "insightsCritical": "{count} critical",
+      "insightsHigh": "{count} high",
+      "notes": "notes",
+      "notesPinned": "{count} pinned",
+      "investigationsCompleted": "completed"
+    },
+    "suggestions": {
+      "scanReady": "Your documents are ready. Run the analysis to surface key points.",
+      "scanAction": "Run analysis",
+      "criticalPending": "{count} critical insights awaiting review.",
+      "criticalAction": "View insights",
+      "investigateReady": "Confirmed insights could benefit from a deeper investigation.",
+      "investigateAction": "View insights",
+      "generateReady": "All analyses are complete. Generate a report.",
+      "generateAction": "Generate report",
+      "addNotes": "Add notes to annotate your discoveries.",
+      "addNotesAction": "New note"
+    },
+    "graph": {
+      "title": "Knowledge graph",
+      "emptyTitle": "No entities extracted",
+      "emptyHint": "The graph will appear once your documents are indexed.",
+      "nodeCount": "{count} entities",
+      "linkCount": "{count} relations",
+      "filterByType": "Filter by type",
+      "askAbout": "Ask about {entity}",
+      "resetView": "Recenter",
+      "typeCompany": "Company",
+      "typePerson": "Person",
+      "typeMetric": "Metric",
+      "typeClause": "Clause",
+      "typeDate": "Date",
+      "typeAmount": "Amount",
+      "typeOther": "Other"
+    },
+    "suggestedQuestions": {
+      "title": "Explore questions"
+    },
+    "graph": {
+      "title": "Knowledge graph",
+      "emptyTitle": "No entities extracted",
+      "emptyHint": "The graph will appear once your documents are indexed.",
+      "nodeCount": "{count} entities",
+      "linkCount": "{count} relations",
+      "mentionCount": "{count} mention(s)",
+      "askAboutButton": "Ask about it",
+      "askAbout": "Tell me about {entity}",
+      "close": "Close",
+      "types": {
+        "company": "Companies",
+        "person": "People",
+        "metric": "Metrics",
+        "clause": "Clauses",
+        "date": "Dates",
+        "amount": "Amounts"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Configure your workspace.",
+    "tabs": {
+      "profile": "Profile",
+      "organization": "Organization",
+      "apiKeys": "API Keys",
+      "webhooks": "Webhooks",
+      "danger": "Danger zone",
+      "billing": "Billing",
+      "admin": "Admin"
+    },
+    "profile": {
+      "description": "Manage your personal information.",
+      "displayName": "Display name",
+      "displayNamePlaceholder": "Your name",
+      "email": "Email",
+      "emailReadOnly": "Email cannot be changed",
+      "avatarUrl": "Avatar URL",
+      "avatarUrlPlaceholder": "https://...",
+      "save": "Save",
+      "saving": "Saving...",
+      "saved": "Profile updated"
+    },
+    "organization": {
+      "name": "Organization name",
+      "slug": "Identifier",
+      "slugReadOnly": "The identifier cannot be changed",
+      "plan": "Plan",
+      "planStarter": "Starter",
+      "planPremium": "Premium",
+      "planTeam": "Team",
+      "planEnterprise": "Enterprise",
+      "planTrial": "Trial",
+      "members": "Members",
+      "invite": "Invite member",
+      "noMembers": "No members",
+      "roleAdmin": "Admin",
+      "roleAnalyst": "Analyst",
+      "roleViewer": "Viewer",
+      "changeRole": "Change role",
+      "removeMember": "Remove member",
+      "removeMemberConfirm": "Remove {name} from the organization?",
+      "memberRemoved": "Member removed",
+      "you": "(you)",
+      "save": "Save",
+      "saving": "Saving...",
+      "saved": "Organization updated",
+      "chatPersonaLabel": "Chat assistant persona",
+      "chatPersonaGeneral": "Generalist (document analysis)",
+      "chatPersonaDd": "DD analyst (PE/VC/M&A)",
+      "chatPersonaHelp": "Default framing of the chat assistant for this organization. Users can always specify additional context in their questions.",
+      "chatPersonaSaved": "Persona updated"
+    },
+    "invite": {
+      "title": "Invite member",
+      "description": "An invitation email will be sent.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "colleague@example.com",
+      "roleLabel": "Role",
+      "submit": "Send invitation",
+      "submitting": "Sending...",
+      "success": "Invitation sent",
+      "alreadyMember": "This user is already a member"
+    },
+    "apiKeys": {
+      "title": "API Keys",
+      "description": "Manage programmatic access keys to the API.",
+      "create": "Create key",
+      "noKeys": "No API keys",
+      "noKeysHint": "Create an API key to access the API programmatically.",
+      "nameLabel": "Key name",
+      "namePlaceholder": "E.g., CI/CD Pipeline",
+      "scopesLabel": "Scopes",
+      "scopesAll": "All (full access)",
+      "rpmLimitLabel": "Rate limit per minute",
+      "rpdLimitLabel": "Rate limit per day",
+      "createButton": "Create",
+      "creating": "Creating...",
+      "secretTitle": "Key created",
+      "secretWarning": "Copy this key now. It will never be shown again.",
+      "copy": "Copy",
+      "copied": "Key copied",
+      "done": "I've copied the key",
+      "active": "Active",
+      "inactive": "Inactive",
+      "lastUsed": "Last used: {time}",
+      "neverUsed": "Never used",
+      "edit": "Edit",
+      "rotate": "Rotate",
+      "rotateConfirm": "The current key will be deactivated and a new one generated. Continue?",
+      "rotateButton": "Confirm rotation",
+      "rotating": "Rotating...",
+      "revoke": "Revoke",
+      "revokeConfirm": "Revoke this key? It can no longer be used.",
+      "revokeButton": "Revoke",
+      "revoking": "Revoking...",
+      "revoked": "Key revoked",
+      "save": "Save",
+      "saving": "Saving...",
+      "saved": "Key updated",
+      "prefix": "Prefix",
+      "createdAt": "Created {time}"
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "description": "Receive HTTP notifications when events happen in your workspace.",
+      "create": "Add webhook",
+      "noWebhooks": "No webhooks configured",
+      "noWebhooksHint": "Add a webhook to receive real-time notifications.",
+      "urlLabel": "Endpoint URL",
+      "urlPlaceholder": "https://example.com/webhook",
+      "eventsLabel": "Events to subscribe",
+      "activeLabel": "Active",
+      "createButton": "Create webhook",
+      "creating": "Creating...",
+      "secretTitle": "Webhook secret",
+      "secretWarning": "Copy this secret now. It will never be shown again. Use it to verify webhook signatures.",
+      "copy": "Copy",
+      "copied": "Secret copied",
+      "done": "I've copied the secret",
+      "active": "Active",
+      "inactive": "Inactive",
+      "test": "Send test",
+      "testSent": "Test event sent",
+      "deliveries": "Delivery history",
+      "rotateSecret": "Rotate secret",
+      "rotateConfirm": "The current secret will be invalidated and a new one generated. All endpoints must be updated. Continue?",
+      "rotateButton": "Confirm rotation",
+      "rotating": "Rotating...",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this webhook? All delivery history will be lost.",
+      "deleteButton": "Delete webhook",
+      "deleting": "Deleting...",
+      "deleted": "Webhook deleted",
+      "deliveriesTitle": "Delivery history",
+      "deliveriesEmpty": "No deliveries yet",
+      "deliveryEvent": "Event",
+      "deliveryStatus": "Status",
+      "deliveryHttpStatus": "HTTP",
+      "deliveryDate": "Date",
+      "deliveryAttempt": "Attempt",
+      "statusDelivered": "Delivered",
+      "statusFailed": "Failed",
+      "statusPending": "Pending",
+      "events": {
+        "source_ready": "Source ready",
+        "source_failed": "Source failed",
+        "scan_completed": "Scan completed",
+        "insight_created": "Insight created",
+        "investigation_completed": "Investigation completed",
+        "deliverable_ready": "Deliverable ready",
+        "webhook_test": "Test"
+      }
+    },
+    "danger": {
+      "title": "Danger zone",
+      "deleteOrg": "Delete organization",
+      "deleteOrgDescription": "This action is irreversible. All workspaces, sources, insights and deliverables will be permanently deleted.",
+      "deleteOrgConfirm": "To confirm, type the organization name:",
+      "deleteOrgButton": "Delete permanently",
+      "deleteOrgDeleting": "Deleting...",
+      "deleteOrgSuccess": "Organization deleted",
+      "leaveOrg": "Leave organization",
+      "leaveOrgDescription": "You will lose access to all workspaces in this organization.",
+      "leaveOrgConfirm": "Are you sure you want to leave this organization?",
+      "leaveOrgButton": "Leave",
+      "leaveOrgLeaving": "Leaving...",
+      "leaveOrgSuccess": "You have left the organization"
+    },
+    "billing": {
+      "title": "Billing",
+      "description": "Manage your subscription and usage limits.",
+      "planLabel": "Current plan",
+      "upgradeToStarter": "Upgrade to Starter — €199/month",
+      "upgradeToPremium": "Upgrade to Premium — €299/month",
+      "upgradeToTeam": "Upgrade to Team — €499/month",
+      "manageSubscription": "Manage subscription",
+      "trialDaysLeft": "{days} day(s) remaining",
+      "trialExpired": "Trial expired",
+      "enterprise": "Enterprise plan — contact us for any changes."
+    },
+    "admin": {
+      "title": "Administration",
+      "description": "Overview of organization usage and costs.",
+      "overviewSection": "Overview",
+      "overviewError": "Unable to load data.",
+      "members": "Members",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Insights",
+      "usageSection": "Usage (6 months)",
+      "costsSection": "Costs by operation",
+      "activitySection": "Recent activity",
+      "apiKeysSection": "API Keys",
+      "noUsageData": "No usage data.",
+      "noActivity": "No recent activity.",
+      "noApiKeys": "No API keys configured.",
+      "operation": "Operation",
+      "requests": "Requests",
+      "tokensIn": "Tokens in",
+      "tokensOut": "Tokens out",
+      "cost": "Cost",
+      "total": "Total",
+      "jobType": "Type",
+      "workspace": "Workspace",
+      "status": "Status",
+      "date": "Date",
+      "keyName": "Name",
+      "prefix": "Prefix",
+      "lastUsed": "Last used",
+      "keyStatus": "Status",
+      "active": "Active",
+      "inactive": "Inactive"
+    }
+  },
+  "landing": {
+    "nav": {
+      "features": "Features",
+      "howItWorks": "How it works",
+      "pricing": "Pricing",
+      "cta": "Get Started"
+    },
+    "hero": {
+      "headline": "Document Intelligence, Automated.",
+      "subtitle": "Upload your documents. Our AI understands them, connects them, and answers your questions — for your analyses, syntheses, and reports.",
+      "ctaPrimary": "Get Started",
+      "ctaSecondary": "See How It Works"
+    },
+    "metrics": {
+      "docsValue": "10K+",
+      "docsLabel": "Documents analyzed",
+      "timeValue": "85%",
+      "timeLabel": "Time saved on analysis",
+      "accuracyValue": "97%",
+      "accuracyLabel": "Extraction accuracy",
+      "cycleValue": "3x",
+      "cycleLabel": "Faster decisions"
+    },
+    "features": {
+      "label": "Features",
+      "title": "Everything you need to understand your documents",
+      "items": [
+        {
+          "title": "AI Document Scanner",
+          "description": "Upload PDFs, XLSX, DOCX — our AI extracts key insights, citations, and metrics automatically."
+        },
+        {
+          "title": "Contextual Chat",
+          "description": "Ask questions about your documents. Get cited answers grounded in your actual data."
+        },
+        {
+          "title": "Key Insight Extraction",
+          "description": "Automatically identify key insights, contradictions, and missing information across your sources."
+        },
+        {
+          "title": "Multi-Source Analysis",
+          "description": "Cross-reference multiple documents to surface contradictions and validate assumptions."
+        },
+        {
+          "title": "Reports & Syntheses",
+          "description": "Generate summaries, analysis memos, and full reports in one click — with citations included."
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Share workspaces, assign roles, and collaborate with your team in real-time."
+        }
+      ]
+    },
+    "howItWorks": {
+      "label": "How it works",
+      "title": "From documents to decisions in 3 steps",
+      "steps": [
+        {
+          "title": "Upload",
+          "description": "Drop your documents — reports, contracts, articles, notes, papers. Any format."
+        },
+        {
+          "title": "Analyze",
+          "description": "AI scans every page, extracts key insights, and organizes knowledge into an interactive graph."
+        },
+        {
+          "title": "Decide",
+          "description": "Review insights, chat with your data, generate reports. Decide faster."
+        }
+      ]
+    },
+    "cta": {
+      "headline": "Ready to understand your documents faster?",
+      "subtitle": "Join the professionals who synthesize, analyze, and decide faster with AI-powered document intelligence.",
+      "ctaPrimary": "Get Started Free",
+      "ctaSecondary": "Book a Demo"
+    },
+    "pricing": {
+      "label": "Pricing",
+      "title": "A plan for every use case",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "yearlyDiscount": "2 months free",
+      "perMonth": "/month",
+      "perYear": "/year",
+      "starter": {
+        "name": "Starter",
+        "price": "€199",
+        "priceYearly": "€1,990",
+        "description": "For researchers, students, and independent analysts.",
+        "f1": "5 active workspaces",
+        "f2": "50 analyses/month",
+        "f3": "AI contextual chat",
+        "f4": "DOCX export",
+        "cta": "Get Started with Starter"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "€299",
+        "priceYearly": "€2,990",
+        "description": "For professionals handling document volume.",
+        "f1": "10 active workspaces",
+        "f2": "100 analyses/month",
+        "f3": "Automated DOCX reports",
+        "f4": "API & Webhooks",
+        "f5": "Priority AI jobs",
+        "cta": "Upgrade to Premium"
+      },
+      "team": {
+        "name": "Team",
+        "price": "€499",
+        "priceYearly": "€4,990",
+        "description": "For teams with sustained document workflows.",
+        "f1": "20 active workspaces",
+        "f2": "200 analyses/month",
+        "f3": "Everything in Premium",
+        "f4": "Unlimited users",
+        "f5": "Priority support",
+        "cta": "Choose Team"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For organizations with specific requirements (premium DD, compliance, private deployment).",
+        "f1": "Unlimited volume",
+        "f2": "SSO & SAML",
+        "f3": "Guaranteed SLA",
+        "f4": "Dedicated support",
+        "f5": "Private deployment available",
+        "cta": "Contact Sales"
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 XAIS · St-Raphaël, France",
+      "login": "Sign in",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "legal": "Legal"
+    }
+  },
+  "nav": {
+    "workspaces": "Workspaces",
+    "settings": "Settings",
+    "apiKeys": "API Keys",
+    "webhooks": "Webhooks",
+    "workspace": "Workspace",
+    "superAdmin": "Super Admin"
+  },
+  "userMenu": {
+    "settings": "Settings",
+    "logout": "Sign out",
+    "language": "Language",
+    "languageFr": "Français",
+    "languageEn": "English"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: March 20, 2026",
+      "intro": "XAIS (\"we\", \"us\") is committed to protecting your personal data. This policy describes what data we collect, why we collect it, how we use it, and your rights under the General Data Protection Regulation (GDPR).",
+      "sections": {
+        "dataController": {
+          "title": "Data Controller",
+          "content": "XAIS SOLUCES, headquartered in Saint-Raphaël, Var, France. Contact: contact@xaisoluces.com. As data controller, XAIS determines the purposes and means of processing your personal data."
+        },
+        "dataCollected": {
+          "title": "Data Collected",
+          "content": "We collect the following data: account information (name, email address, hashed password); organization information (name, domain); documents you upload for analysis; usage metadata (actions performed, timestamps); billing data (managed by Stripe — we never access card details); technical logs (IP addresses, user-agent, for security and debugging purposes)."
+        },
+        "purpose": {
+          "title": "Purpose of Processing",
+          "content": "Your data is processed for the following purposes: providing and improving the document intelligence service; AI analysis of your documents via Claude (Anthropic) and Gemini (Google); account management and authentication; billing and subscription management via Stripe; customer support; security and fraud prevention; aggregated and anonymized usage statistics."
+        },
+        "legalBasis": {
+          "title": "Legal Basis",
+          "content": "Data processing is based on the following legal grounds: performance of a contract (Art. 6.1.b GDPR) for service delivery; legitimate interests (Art. 6.1.f GDPR) for security and service improvement; legal obligation (Art. 6.1.c GDPR) for retaining billing records; consent (Art. 6.1.a GDPR) for non-essential cookies where applicable."
+        },
+        "retention": {
+          "title": "Data Retention",
+          "content": "Account data is retained for the duration of your subscription and 3 years after termination. Uploaded documents are retained as needed for analysis and may be deleted on request or upon account closure. Billing data is retained for 10 years as required by French law. Technical logs are retained for 12 months."
+        },
+        "thirdParties": {
+          "title": "Sub-processors and Transfers",
+          "content": "We use the following sub-processors: Supabase Inc. (database and authentication, EU servers); Vercel Inc. (frontend hosting, EU/US servers with Privacy Shield); Render Inc. (API/Worker compute, US servers); Stripe Inc. (payments, EU/US servers, PCI DSS certified); Anthropic PBC (Claude model for AI analysis, US servers); Google LLC (Gemini models for embeddings, US servers). Transfers outside the EU are governed by Standard Contractual Clauses (SCCs) or equivalent mechanisms."
+        },
+        "rights": {
+          "title": "Your Rights",
+          "content": "Under GDPR, you have the following rights: access to your personal data; rectification of inaccurate data; erasure ('right to be forgotten'); data portability; objection to processing; restriction of processing. To exercise these rights, contact us at contact@xaisoluces.com. You may also lodge a complaint with your local data protection authority."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "XAIS Vault uses only strictly necessary cookies for service operation: Supabase session cookie (authentication) and language preferences. We do not use advertising tracking cookies or third-party marketing cookies. No consent is required for these functional cookies."
+        },
+        "contact": {
+          "title": "Contact & DPO",
+          "content": "For any questions regarding your personal data, contact our Data Protection Officer: contact@xaisoluces.com. We are committed to responding within 30 days."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: March 20, 2026",
+      "intro": "These Terms of Service govern access to and use of the XAIS Vault platform, a document intelligence service published by XAIS SOLUCES. By using the service, you agree to all of these terms.",
+      "sections": {
+        "definitions": {
+          "title": "Definitions",
+          "content": "'Service' means the XAIS Vault platform accessible at xais-vault.vercel.app. 'User' means any individual with an account. 'Organization' means the entity (company, firm, fund) grouping multiple users. 'Content' means any document, file or data uploaded by a user. 'Plan' means the subscribed pricing tier."
+        },
+        "object": {
+          "title": "Service Description",
+          "content": "XAIS Vault is a SaaS document intelligence platform for professionals handling document volume (researchers, lawyers, consultants, journalists, PE/VC/M&A analysts, product managers, students, etc.). The service enables automated document analysis, insights extraction, deliverable generation (summaries, analysis memos, reports), and team collaboration."
+        },
+        "access": {
+          "title": "Access and Registration",
+          "content": "Access to the service requires creating an account with a valid email address and password. Users are responsible for keeping their credentials confidential. Organizations can have multiple users with different roles: Administrator (organization and member management), Analyst (workspace creation and document uploads), Viewer (read-only access). Registration implies acceptance of these Terms."
+        },
+        "subscriptions": {
+          "title": "Subscriptions and Billing",
+          "content": "The service is offered under several pricing plans (Starter, Premium, Team, Enterprise) detailed on the pricing page. Billing is monthly or annual, processed via Stripe. Subscriptions auto-renew unless cancelled. A free trial may be offered with no commitment. Prices are in euros, excluding taxes. XAIS reserves the right to modify pricing with 30 days' notice."
+        },
+        "obligations": {
+          "title": "User Obligations",
+          "content": "Users agree to: use the service for its intended purpose (professional document analysis); not attempt to circumvent security measures or reverse-engineer the service; not upload unlawful documents, content infringing third-party rights, or malware; respect plan limits (number of workspaces, sources, analyses); maintain account confidentiality."
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property",
+          "content": "XAIS retains all intellectual property rights in the service, its code, interfaces, and trademarks. Users retain all rights in the documents they upload. XAIS obtains a limited, non-exclusive, revocable license to process those documents solely for service delivery purposes. Generated deliverables belong to the user."
+        },
+        "liability": {
+          "title": "Liability and AI Disclaimers",
+          "content": "XAIS Vault is a decision-support tool. AI-generated analyses and deliverables do not constitute legal, financial, or investment advice. Users assume full responsibility for decisions made on the basis of generated analyses. XAIS's liability is limited to amounts paid in the preceding 12 months. XAIS is not liable for service interruptions or data losses beyond agreed SLA commitments."
+        },
+        "termination": {
+          "title": "Termination",
+          "content": "Users may cancel their subscription at any time from account settings. Cancellation takes effect at the end of the current billing period. XAIS may suspend or terminate an account for ToS violations, with prior notice except in urgent cases. Upon termination, data is retained for 30 days then deleted, unless legally required otherwise."
+        },
+        "applicableLaw": {
+          "title": "Governing Law and Jurisdiction",
+          "content": "These Terms are governed by French law. In case of dispute, the parties agree to seek an amicable resolution first. Failing that, the competent court will be that of XAIS SOLUCES's registered office (Var, France), unless mandatory legal provisions apply."
+        }
+      }
+    },
+    "legal": {
+      "title": "Legal Notice",
+      "lastUpdated": "Last updated: March 20, 2026",
+      "sections": {
+        "editor": {
+          "title": "Publisher",
+          "content": "The site xais-vault.vercel.app is published by XAIS SOLUCES, domiciled in Saint-Raphaël, Var, France. Publication management: XAIS SOLUCES (contact@xaisoluces.com). Additional legal information (company registration number, legal form) is available upon request at contact@xaisoluces.com."
+        },
+        "hosting": {
+          "title": "Hosting",
+          "content": "Frontend: Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA (vercel.com). API and Worker: Render Inc., 525 Brannan Street Suite 300, San Francisco, CA 94107, USA (render.com). Database: Supabase Inc., 970 Toa Payoh North, Singapore (supabase.com), data hosted in the Europe region (eu-central-1)."
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property",
+          "content": "All content on this site (text, images, interfaces, source code, trademarks, logos) is protected by copyright and belongs to XAIS SOLUCES or its partners. Any reproduction, representation, or distribution, in whole or in part, without prior written authorization is prohibited."
+        },
+        "personalData": {
+          "title": "Personal Data",
+          "content": "The processing of personal data collected through this site is described in our Privacy Policy, accessible at /privacy. In accordance with GDPR, you have the right to access, rectify, erase, and port your data. To exercise these rights: contact@xaisoluces.com."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "This site uses only functional cookies necessary for authentication and user preferences. No tracking or targeted advertising cookies are used. For more information, please consult our Privacy Policy."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For any questions regarding this site or our services: contact@xaisoluces.com. XAIS SOLUCES, Saint-Raphaël, Var, France."
+        }
+      }
+    }
+  },
+  "superAdmin": {
+    "title": "Super Admin",
+    "loading": "Loading...",
+    "accessDenied": "Access denied — Super-admin only",
+    "tabs": {
+      "activity": "Activity",
+      "health": "Health",
+      "summarization": "Summarization",
+      "overview": "Overview"
+    },
+    "overview": {
+      "loading": "Loading...",
+      "activeOrgs": "Active orgs (7d)",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Insights",
+      "deliverables": "Deliverables",
+      "chatMessages": "Chat messages",
+      "failedJobs24h": "Failed jobs (24h)",
+      "successRate7d": "Success rate (7d)"
+    },
+    "orgTable": {
+      "loading": "Loading...",
+      "name": "Organization",
+      "plan": "Plan",
+      "members": "Members",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "insights": "Insights",
+      "messages": "Messages",
+      "deliverables": "Deliverables",
+      "lastActivity": "Last activity",
+      "empty": "No organizations"
+    },
+    "activity": {
+      "loading": "Loading...",
+      "allTypes": "All types",
+      "allOrgs": "All organizations",
+      "empty": "No recent activity"
+    },
+    "userTable": {
+      "title": "User activity",
+      "loading": "Loading...",
+      "email": "User",
+      "org": "Organization",
+      "workspaces": "Workspaces",
+      "sources": "Sources",
+      "messages": "Messages",
+      "lastActive": "Last active",
+      "allOrgs": "All organizations",
+      "empty": "No users"
+    },
+    "summarization": {
+      "loading": "Loading...",
+      "totalCount": "Total summarizations",
+      "count24h": "24h",
+      "totalCost": "Total cost",
+      "avgCost": "Average cost",
+      "avgInputTokens": "Avg input tokens",
+      "avgOutputTokens": "Avg output tokens",
+      "alertThreshold": "Alert threshold exceeded",
+      "noData": "No summarizations recorded"
+    },
+    "health": {
+      "loading": "Loading...",
+      "successRate": "Job success rate (7 days)",
+      "failedJobs24h": "Failed jobs (24h)",
+      "errorLog": "Error log",
+      "noErrors": "No recent errors",
+      "type": "Type",
+      "org": "Organization",
+      "workspace": "Workspace",
+      "error": "Error",
+      "attempts": "Attempts",
+      "date": "Date"
+    }
+  }
+}
