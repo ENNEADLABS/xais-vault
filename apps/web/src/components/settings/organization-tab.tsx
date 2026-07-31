@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
@@ -45,7 +45,7 @@ export function OrganizationTab({ orgId }: OrganizationTabProps) {
   const { data: membersData } = useOrganizationMembers(orgId);
   const updateOrg = useUpdateOrganization(orgId);
 
-  const [name, setName] = useState("");
+  const nameInputRef = useRef<HTMLInputElement>(null);
   const [inviteOpen, setInviteOpen] = useState(false);
 
   const org = orgData?.data;
@@ -54,13 +54,11 @@ export function OrganizationTab({ orgId }: OrganizationTabProps) {
   const currentMember = members.find((m) => m.user_id === currentUserId);
   const isAdmin = currentMember?.role === "admin";
 
-  useEffect(() => {
-    if (org) setName(org.name);
-  }, [org]);
-
   async function handleSave() {
     try {
-      await updateOrg.mutateAsync({ name });
+      await updateOrg.mutateAsync({
+        name: nameInputRef.current?.value ?? org?.name ?? "",
+      });
       toast.success(t("organization.saved"));
     } catch {
       toast.error("Erreur lors de la mise à jour");
@@ -94,9 +92,10 @@ export function OrganizationTab({ orgId }: OrganizationTabProps) {
           <Label htmlFor="org-name">{t("organization.name")}</Label>
           <div className="flex gap-2">
             <Input
+              key={org?.id ?? "organization-name"}
+              ref={nameInputRef}
               id="org-name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              defaultValue={org?.name ?? ""}
               disabled={!isAdmin}
             />
             {isAdmin && (

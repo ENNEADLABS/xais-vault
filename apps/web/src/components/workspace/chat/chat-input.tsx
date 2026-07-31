@@ -26,11 +26,11 @@ export function ChatInput({
   const isDesktop = useMediaQuery(BREAKPOINTS.md);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(
+    () => useWorkspaceInteractionStore.getState().prefillChatMessage ?? "",
+  );
 
   // Prefill depuis le store (clic topic/question dans sources)
-  const prefill = useWorkspaceInteractionStore((s) => s.prefillChatMessage);
-  const clearPrefill = useWorkspaceInteractionStore((s) => s.setPrefillChatMessage);
   const setFocusSource = useWorkspaceInteractionStore((s) => s.setFocusSource);
 
   const {
@@ -44,12 +44,21 @@ export function ChatInput({
   } = useMentionDropdown({ sources });
 
   useEffect(() => {
-    if (prefill) {
-      setValue(prefill);
-      clearPrefill(null);
+    const initialPrefill = useWorkspaceInteractionStore.getState().prefillChatMessage;
+    if (initialPrefill) {
+      useWorkspaceInteractionStore.getState().setPrefillChatMessage(null);
       textareaRef.current?.focus();
     }
-  }, [prefill, clearPrefill]);
+
+    return useWorkspaceInteractionStore.subscribe((state, previousState) => {
+      const nextPrefill = state.prefillChatMessage;
+      if (!nextPrefill || nextPrefill === previousState.prefillChatMessage) return;
+
+      setValue(nextPrefill);
+      state.setPrefillChatMessage(null);
+      textareaRef.current?.focus();
+    });
+  }, []);
 
   // Auto-resize textarea
   useEffect(() => {

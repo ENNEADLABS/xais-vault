@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowUpDown } from "lucide-react";
 import { useUserActivity, useOrgMetrics } from "@/lib/hooks/use-super-admin";
@@ -13,11 +13,20 @@ interface UserActivityTableProps {
 }
 
 export function UserActivityTable({ initialOrgId = "" }: UserActivityTableProps) {
+  return (
+    <UserActivityTableContent
+      key={initialOrgId}
+      initialOrgId={initialOrgId}
+    />
+  );
+}
+
+function UserActivityTableContent({ initialOrgId }: Required<UserActivityTableProps>) {
   const t = useTranslations("superAdmin.userTable");
   const [orgFilter, setOrgFilter] = useState<string>(initialOrgId);
-  useEffect(() => { setOrgFilter(initialOrgId); }, [initialOrgId]);
   const [sortKey, setSortKey] = useState<SortKey>("last_active_at");
   const [sortAsc, setSortAsc] = useState(false);
+  const [now] = useState(() => Date.now());
 
   const { data: users, isLoading } = useUserActivity(orgFilter || undefined);
   const { data: orgs } = useOrgMetrics();
@@ -45,15 +54,6 @@ export function UserActivityTable({ initialOrgId = "" }: UserActivityTableProps)
     { key: "chat_messages_sent", label: t("messages") },
     { key: "last_active_at", label: t("lastActive") },
   ];
-
-  // Fraîcheur de l'activité
-  function activityClass(lastActive: string | null) {
-    if (!lastActive) return "text-vault-text-muted";
-    const hours = (Date.now() - new Date(lastActive).getTime()) / 3_600_000;
-    if (hours < 24) return "text-green-400";
-    if (hours < 168) return "text-vault-text-secondary";
-    return "text-vault-text-muted";
-  }
 
   return (
     <div className="space-y-3">
@@ -117,7 +117,7 @@ export function UserActivityTable({ initialOrgId = "" }: UserActivityTableProps)
                   <td className="px-3 py-2 text-vault-text-secondary">{user.workspaces_created}</td>
                   <td className="px-3 py-2 text-vault-text-secondary">{user.sources_uploaded}</td>
                   <td className="px-3 py-2 text-vault-text-secondary">{user.chat_messages_sent}</td>
-                  <td className={cn("px-3 py-2 font-mono text-xs", activityClass(user.last_active_at))}>
+                  <td className={cn("px-3 py-2 font-mono text-xs", getActivityClass(user.last_active_at, now))}>
                     {user.last_active_at
                       ? new Date(user.last_active_at).toLocaleDateString()
                       : "—"}
@@ -130,4 +130,12 @@ export function UserActivityTable({ initialOrgId = "" }: UserActivityTableProps)
       </div>
     </div>
   );
+}
+
+export function getActivityClass(lastActive: string | null, now: number): string {
+  if (!lastActive) return "text-vault-text-muted";
+  const hours = (now - new Date(lastActive).getTime()) / 3_600_000;
+  if (hours < 24) return "text-green-400";
+  if (hours < 168) return "text-vault-text-secondary";
+  return "text-vault-text-muted";
 }

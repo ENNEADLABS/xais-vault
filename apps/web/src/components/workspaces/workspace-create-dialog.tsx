@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
@@ -30,7 +30,7 @@ export function WorkspaceCreateDialog({ open, onOpenChange }: WorkspaceCreateDia
   const { mutateAsync, isPending } = useCreateWorkspace();
   const [serverError, setServerError] = useState<string | null>(null);
 
-  const { register, handleSubmit, setValue, watch, formState: { errors } } =
+  const { control, register, handleSubmit, setValue, formState: { errors } } =
     useForm<WorkspaceCreateFormData>({
       resolver: zodResolver(workspaceCreateSchema),
       defaultValues: {
@@ -43,7 +43,9 @@ export function WorkspaceCreateDialog({ open, onOpenChange }: WorkspaceCreateDia
       },
     });
 
-  const emoji = watch("emoji");
+  const emoji = useWatch({ control, name: "emoji" });
+  const workspaceType = useWatch({ control, name: "workspaceType" });
+  const sector = useWatch({ control, name: "sector" });
 
   async function onSubmit(data: WorkspaceCreateFormData) {
     setServerError(null);
@@ -88,9 +90,9 @@ export function WorkspaceCreateDialog({ open, onOpenChange }: WorkspaceCreateDia
             {...register("name")}
           />
           <WorkspaceFormFields
-            workspaceType={watch("workspaceType") ?? ""}
+            workspaceType={workspaceType ?? ""}
             onWorkspaceTypeChange={(v) => setValue("workspaceType", v)}
-            sector={watch("sector") ?? ""}
+            sector={sector ?? ""}
             onSectorChange={(v) => setValue("sector", v)}
           />
           <TerminalField

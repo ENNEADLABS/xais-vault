@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import type { Source } from "@/types/api";
 
 interface UseMentionDropdownOptions {
@@ -42,17 +42,13 @@ export function useMentionDropdown({
     return readySources.filter((s) => s.name.toLowerCase().includes(lower));
   }, [readySources, mentionFilter]);
 
-  // Reset index quand le filtre change
-  useEffect(() => {
-    setMentionIndex(0);
-  }, [mentionFilter]);
-
   function handleMentionDetection(newValue: string) {
     const lastAt = newValue.lastIndexOf("@");
     if (lastAt >= 0) {
       const afterAt = newValue.slice(lastAt + 1);
       if (!afterAt.includes(" ") && !afterAt.includes("\n")) {
         setShowMention(true);
+        setMentionIndex(0);
         setMentionFilter(afterAt);
         return;
       }
