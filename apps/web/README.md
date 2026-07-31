@@ -17,7 +17,7 @@ Next.js 16 frontend for XAIS Vault. App Router, TypeScript, Tailwind CSS v4, sha
 ## Dev
 
 ```bash
-npm install
+npm ci
 npm run dev        # http://localhost:3000
 npm run build      # production build
 npx tsc --noEmit   # type check
@@ -31,13 +31,13 @@ src/
 ├── app/
 │   ├── [locale]/
 │   │   ├── (auth)/       # login, signup, callback
-│   │   └── (app)/        # dashboard, deals/[id], settings, onboarding
+│   │   └── (app)/        # dashboard, workspaces/[id], settings, onboarding
 │   └── layout.tsx
 ├── components/
 │   ├── ui/               # shadcn primitives
 │   ├── layout/           # ThreePanelLayout, Sidebar, Header
-│   ├── deal/             # Sources, Chat, Findings, Notes, Deliverables
-│   ├── deals/            # DealCard, DealToolbar, EmptyState
+│   ├── workspace/        # Sources, Chat, Insights, Notes, Deliverables
+│   ├── workspaces/       # WorkspaceCard, WorkspaceToolbar, EmptyState
 │   └── settings/         # OrgSettings, ApiKeys, Webhooks
 ├── lib/
 │   ├── api.ts            # typed fetch client

@@ -2,7 +2,7 @@
 
 > Version : 2.2
 > Date : 13 mai 2026
-> Statut : Pivot généraliste Phases 1+2+3 livrées — voir [docs/roadmap-pivot.md](docs/roadmap-pivot.md) pour Phase 4
+> Statut : Pivot généraliste Phases 1+2+3 livrées ; Phase 4 non planifiée dans ce snapshot
 > Historique : v1.0 (14 mars 2026) — positionnement PE/VC/M&A exclusif ; v2.0 (alignement post Phase 1) ; v2.1 (alignement post Phase 2) ; v2.2 (alignement post Phase 3, migration DB deals→workspaces + findings→insights + /api/v2/)
 
 ---
