@@ -885,7 +885,7 @@
       "sections": {
         "definitions": {
           "title": "Definitions",
-          "content": "'Service' means the XAIS Vault platform accessible at xais-vault.vercel.app. 'User' means any individual with an account. 'Organization' means the entity (company, firm, fund) grouping multiple users. 'Content' means any document, file or data uploaded by a user. 'Plan' means the subscribed pricing tier."
+          "content": "'Service' means the deployed XAIS Vault application. 'User' means any individual with an account. 'Organization' means the entity (company, firm, fund) grouping multiple users. 'Content' means any document, file or data uploaded by a user. 'Plan' means the subscribed pricing tier."
         },
         "object": {
           "title": "Service Description",
@@ -927,11 +927,11 @@
       "sections": {
         "editor": {
           "title": "Publisher",
-          "content": "The site xais-vault.vercel.app is published by XAIS SOLUCES, domiciled in Saint-Raphaël, Var, France. Publication management: XAIS SOLUCES (contact@xaisoluces.com). Additional legal information (company registration number, legal form) is available upon request at contact@xaisoluces.com."
+          "content": "This public repository is a source-code snapshot and is not currently operated as a hosted service. Any deployment operator is responsible for publishing legal information applicable to their instance."
         },
         "hosting": {
           "title": "Hosting",
-          "content": "Frontend: Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA (vercel.com). API and Worker: Render Inc., 525 Brannan Street Suite 300, San Francisco, CA 94107, USA (render.com). Database: Supabase Inc., 970 Toa Payoh North, Singapore (supabase.com), data hosted in the Europe region (eu-central-1)."
+          "content": "Hosting depends on the infrastructure selected by the deployment operator. Review and update this notice before exposing an instance to users."
         },
         "intellectualProperty": {
           "title": "Intellectual Property",

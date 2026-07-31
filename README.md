@@ -2,6 +2,8 @@
 
 > Document intelligence for knowledge professionals — researchers, lawyers, consultants, journalists, PMs, students, and PE/VC/M&A analysts.
 
+> **Project status:** public source snapshot for learning and experimentation. No hosted instance is currently operated; run it locally with your own infrastructure and credentials.
+
 [![CI](https://github.com/ENNEADLABS/xais-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/ENNEADLABS/xais-vault/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
@@ -72,7 +74,7 @@ graph LR
 ## Quick Start
 
 ```bash
-git clone https://github.com/XAISOLUCES/xais-vault.git
+git clone https://github.com/ENNEADLABS/xais-vault.git
 cd xais-vault
 cp .env.example .env          # Fill in your API keys
 pip install -r requirements.txt

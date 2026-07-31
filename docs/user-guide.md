@@ -6,9 +6,12 @@
 
 ## 1. Premiers pas
 
+> Cette version publique n'est pas exploitée comme un service hébergé. Les étapes
+> ci-dessous supposent une installation locale ou un déploiement que vous contrôlez.
+
 ### Créer un compte
 
-1. Accéder à [xais-vault.vercel.app](https://xais-vault.vercel.app)
+1. Ouvrir l'URL de votre instance XAIS Vault
 2. Cliquer **Sign up** — email + mot de passe
 3. Confirmer l'email (lien Supabase Auth)
 4. Créer votre organisation au premier login (onboarding)
@@ -137,12 +140,12 @@ Settings → **API Keys** → **Créer une clé** :
 
 ```bash
 curl -H "Authorization: Bearer xv_live_..." \
-     https://xais-vault-api.onrender.com/api/v2/workspaces/
+     http://localhost:8000/api/v2/workspaces/
 ```
 
 - Le secret est affiché **une seule fois** à la création — le noter immédiatement
 - Limites : RPM (requêtes/minute) + RPD (requêtes/jour) selon le plan
-- Documentation interactive : [xais-vault-api.onrender.com/docs](https://xais-vault-api.onrender.com/docs)
+- Documentation interactive : `http://localhost:8000/docs` par défaut
 
 ---
 

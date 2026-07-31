@@ -288,7 +288,7 @@ Les livrables intègrent :
 
 | Phase | Contenu | Durée estimée |
 |-------|---------|---------------|
-| **0** | Setup repo, CLAUDE.md, schema DB, structure monorepo | 1-2 jours |
+| **0** | Setup repo, conventions d'architecture, schéma DB, structure monorepo | 1-2 jours |
 | **1** | Fondations : auth, CRUD, job queue, worker, extracteurs | 1 semaine |
 | **2** | Chat RAG hybride + streaming SSE | 1 semaine |
 | **3** | Agents DD (scanner, vérificateur, chercheur, rédacteur) | 2 semaines |
