@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { WorkspacesPageClient } from "@/components/workspaces/workspaces-page-client";
 
 export default async function WorkspacesPage({
@@ -8,8 +8,6 @@ export default async function WorkspacesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("workspaces");
-
   return (
     <div className="flex flex-col gap-4 p-6 md:p-8">
       <WorkspacesPageClient />

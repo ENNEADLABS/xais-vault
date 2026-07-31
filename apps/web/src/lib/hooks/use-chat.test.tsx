@@ -112,7 +112,6 @@ describe("useSendMessage", () => {
   });
 
   it("accumulates streaming text", async () => {
-    let capturedText = "";
     const stream = createSSEStream([
       sseLines("session", { id: "s1" }),
       sseLines("content", { text: "Bon" }),

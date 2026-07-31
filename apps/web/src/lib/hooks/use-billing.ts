@@ -1,6 +1,6 @@
 "use client";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { api, type ApiResponse } from "@/lib/api";
 import type { BillingStatus } from "@/types/api";
 

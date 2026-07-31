@@ -93,13 +93,13 @@ export function SettingsTabs() {
 
           {active === "api-keys" && (
             organizationId
-              ? <ApiKeysTab orgId={organizationId} />
+              ? <ApiKeysTab />
               : <p className="text-vault-text-muted text-sm">Aucune organisation sélectionnée.</p>
           )}
 
           {active === "webhooks" && (
             organizationId
-              ? <WebhooksTab orgId={organizationId} />
+              ? <WebhooksTab />
               : <p className="text-vault-text-muted text-sm">Aucune organisation sélectionnée.</p>
           )}
 

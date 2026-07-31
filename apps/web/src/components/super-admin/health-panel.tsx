@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { AlertTriangle } from "lucide-react";
 import { useErrorLog, usePlatformOverview } from "@/lib/hooks/use-super-admin";
 import { cn } from "@/lib/utils";
 

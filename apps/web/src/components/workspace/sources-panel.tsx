@@ -12,6 +12,9 @@ import { SourceCardSkeleton } from "./source-card-skeleton";
 import { SourceUploadDialog } from "./source-upload-dialog";
 import { SourcesPanelCollapsed } from "./sources-panel-collapsed";
 import { SourcesPanelHeader } from "./sources-panel-header";
+import type { Source } from "@/types/api";
+
+const EMPTY_SOURCES: Source[] = [];
 
 interface SourcesPanelProps {
   workspaceId: string;
@@ -41,7 +44,7 @@ export function SourcesPanel({
   const [droppedFiles, setDroppedFiles] = useState<File[]>([]);
   const [search, setSearch] = useState("");
   const { data, isLoading } = useSources(workspaceId);
-  const sources = data?.data ?? [];
+  const sources = data?.data ?? EMPTY_SOURCES;
 
   const handleDroppedFiles = useCallback((files: File[]) => {
     setDroppedFiles(files);

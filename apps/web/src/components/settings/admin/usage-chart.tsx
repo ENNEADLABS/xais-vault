@@ -67,8 +67,6 @@ export function UsageChart() {
       {/* Barres par mois */}
       {months.map(([month, ops]) => {
         const total = Object.values(ops).reduce((a, b) => a + b, 0);
-        const widthPct = (total / maxTotal) * 100;
-
         return (
           <div key={month} className="flex items-center gap-3">
             <span className="font-mono text-[11px] text-vault-text-muted w-14 shrink-0 text-right">

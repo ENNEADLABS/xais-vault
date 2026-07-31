@@ -10,7 +10,7 @@ import {
   Search,
   Zap,
 } from "lucide-react";
-import { useGlobalActivity, useUserActivity } from "@/lib/hooks/use-super-admin";
+import { useGlobalActivity } from "@/lib/hooks/use-super-admin";
 import { UserActivityTable } from "./user-activity-table";
 import { cn } from "@/lib/utils";
 
