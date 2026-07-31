@@ -3,8 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  pull_request: {}
 
 jobs:
   secret-scan:
@@ -52,7 +51,7 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt ruff
+        run: pip install --require-hashes -r requirements-dev.txt
 
       - name: Lint with ruff
         run: ruff check .
@@ -86,11 +85,19 @@ jobs:
           cache-dependency-path: apps/web/package-lock.json
 
       - name: Install dependencies
-        # Lockfile generated on macOS lacks Linux-only optional deps
-        # entries (@emnapi/runtime, @emnapi/core). Use npm install
-        # --include=optional instead of npm ci to tolerate this — same
-        # strategy as Vercel prod build.
-        run: npm install --include=optional --no-audit --no-fund
+        run: npm ci --include=optional --no-audit --no-fund
+        working-directory: apps/web
+
+      - name: Lint
+        run: npm run lint
+        working-directory: apps/web
+
+      - name: Test
+        run: npm test
+        working-directory: apps/web
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
         working-directory: apps/web
 
       - name: Build
@@ -100,3 +107,14 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: https://fake.supabase.co
           NEXT_PUBLIC_SUPABASE_ANON_KEY: fake-anon-key
           NEXT_PUBLIC_API_URL: http://localhost:8000
+
+  compose-config:
+    name: Docker Compose config
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate Compose configuration
+        run: docker compose config --quiet

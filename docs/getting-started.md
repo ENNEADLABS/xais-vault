@@ -1,44 +1,43 @@
 # Getting Started — XAIS Vault v2
 
-## Prerequis
+## Prérequis
 
-- Python 3.12+
-- Node.js 22+
-- Projet Supabase (PostgreSQL 17)
-- Cles API : Anthropic (Claude), Google (Gemini), Tavily
-- Compte Stripe (plans payants, optionnel pour dev)
+- Docker
+- Supabase CLI et client PostgreSQL (`psql`)
+- Python 3.12 et Node.js 24 / npm 11 pour le développement natif
+- Clés API Anthropic, Google et Tavily
 
 ## Installation
 
-### 1. Backend
+### Parcours recommandé avec Docker
 
 ```bash
-# Creer et activer l'environnement virtuel
-python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
+supabase start
+./scripts/bootstrap-database.sh
 
-# Installer les dependances
-pip install -r requirements.txt
-
-# Configurer les variables d'environnement
 cp .env.example .env
-# Remplir .env avec vos cles (voir docs/environment.md)
+# Reporter dans .env les clés affichées par `supabase status`,
+# puis renseigner ANTHROPIC_API_KEY, GOOGLE_API_KEY et TAVILY_API_KEY.
+
+docker compose up --build
 ```
 
-### 2. Frontend
+L'application est disponible sur `http://localhost:3000`, l'API sur `http://localhost:8000/docs` et Supabase Studio sur `http://localhost:55323`.
+
+Le script de bootstrap refuse d'écrire dans une base contenant déjà les tables XAIS Vault. Pour recommencer localement, utilisez `supabase db reset`, puis relancez le script.
+
+### Développement natif
 
 ```bash
+# Backend
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install --require-hashes -r requirements-dev.txt
+
+# Frontend
 cd apps/web
-npm install
+npm ci
 ```
-
-### 3. Base de donnees
-
-Executer dans le SQL Editor de Supabase :
-1. `supabase/schema.sql` — Tables + indexes + triggers
-2. `supabase/rls.sql` — Row-Level Security policies
-3. `supabase/storage.sql` — Buckets Storage
-Les fonctions RPC sont dans `supabase/migrations/` (appliquees automatiquement par Supabase CLI ou a executer manuellement).
 
 ## Lancement
 
@@ -53,9 +52,6 @@ PYTHONPATH=. python -m apps.worker.app.main
 cd apps/web && npm run dev
 ```
 
-L'application est accessible sur `http://localhost:3000`
-L'API est accessible sur `http://localhost:8000/docs` (Swagger)
-
 ## Tests
 
 ```bash
@@ -66,7 +62,7 @@ pytest -v --tb=short
 pytest --cov=apps --cov=packages --cov-report=term-missing
 
 # Frontend
-cd apps/web && npx vitest run
+cd apps/web && npm test
 ```
 
-Voir [docs/testing.md](testing.md) pour les details.
+Voir [le guide des tests](testing.md) pour les détails.
