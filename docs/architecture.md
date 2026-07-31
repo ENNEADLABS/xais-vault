@@ -1,6 +1,6 @@
 # MAGIC DOC: Architecture — XAIS Vault v2
 
-> Architecture domain-agnostic : le code (`workspaces`, `insights`, `sources`, etc.) supporte le cas d'usage premium DD PE/VC ainsi que les autres personas listées dans [PRD.md §2](../PRD.md). Le wording user-facing (i18n) est généraliste depuis le pivot Phases 1+2 (livrées 2026-05-12). Le persona du chat assistant est configurable par organisation (`organizations.chat_persona`) — défaut `general`, optionnel `dd`. Voir [roadmap-pivot.md](./roadmap-pivot.md) pour le renommage DB prévu en Phase 3.
+> Architecture domain-agnostic : le code (`workspaces`, `insights`, `sources`, etc.) supporte le cas d'usage premium DD PE/VC ainsi que les autres personas listées dans [PRD.md §2](../PRD.md). Le wording user-facing (i18n) est généraliste depuis le pivot Phases 1+2. Le persona du chat assistant est configurable par organisation (`organizations.chat_persona`) — défaut `general`, optionnel `dd`. Le renommage DB de la Phase 3 est inclus dans les migrations.
 
 ## Vue d'ensemble
 
@@ -20,8 +20,8 @@ supabase/
 ├── schema.sql    → Schema initial (source de vérité, 24 tables)
 ├── rls.sql       → Row-Level Security policies
 ├── storage.sql   → Buckets Storage (sources, deliverables)
-├── seed.sql      → Données de démo
-├── migrations/   → Migrations incrémentales (RAG v2/v3, chat_persona, premium plan, etc.) — appliquées via `supabase db push --linked`
+├── config.toml   → Stack Supabase locale isolée
+├── migrations/   → Migrations incrémentales appliquées par le script de bootstrap
 └── rpc/          → Fonctions SQL (search_chunks_hybrid, graph_search, etc.)
 ```
 

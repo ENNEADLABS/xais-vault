@@ -13,6 +13,7 @@
 | `TAVILY_API_KEY` | Cle API Tavily (recherche web, agent Chercheur) |
 | `FRONTEND_URL` | URL du frontend Next.js (CORS) |
 | `ENVIRONMENT` | `development` / `staging` / `production` |
+| `XAIS_DATABASE_URL` | URL PostgreSQL utilisée uniquement par le script de bootstrap |
 
 ## Backend (optionnelles)
 
@@ -43,18 +44,17 @@
 | `NEXT_PUBLIC_STRIPE_PRICE_TEAM_YEARLY` | Price ID Stripe plan Team annuel |
 | `NEXT_PUBLIC_SENTRY_DSN` | DSN Sentry pour le monitoring frontend (optionnel) |
 
-## Setup local
+## Configuration locale
 
 ```bash
-# Copier le template
+supabase start
+supabase status
 cp .env.example .env
-
-# Remplir les valeurs
-# Les cles Supabase sont dans le dashboard projet > Settings > API
-# ANTHROPIC_API_KEY depuis console.anthropic.com
-# GOOGLE_API_KEY depuis console.cloud.google.com
-# TAVILY_API_KEY depuis app.tavily.com
 ```
+
+Le stack local utilise l'API Supabase `55321`, PostgreSQL `55322`, Studio `55323` et Mailpit `55324`. Reportez les clés `anon`, `service_role` et le secret JWT affichés par `supabase status` dans `.env`. Le fichier racine `.env` est partagé par Docker Compose avec l'API, le worker et le frontend.
+
+Ne réutilisez pas `DATABASE_URL` : le bootstrap lit volontairement `XAIS_DATABASE_URL` afin de ne pas écraser la configuration d'un autre projet.
 
 ## Securite
 

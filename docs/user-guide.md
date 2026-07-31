@@ -188,6 +188,6 @@ Upgrade : Settings → **Facturation**.
 
 ## Besoin d'aide ?
 
-- Documentation technique : [docs/](.)
+- Documentation technique : [guide de démarrage](getting-started.md)
 - API interactive : `/docs` sur l'API
-- Support : contact via l'organisation XAIS
+- Support : ce snapshot pédagogique est fourni sans support garanti
