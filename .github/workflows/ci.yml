@@ -52,7 +52,7 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt ruff
+        run: pip install --require-hashes -r requirements-dev.txt
 
       - name: Lint with ruff
         run: ruff check .
