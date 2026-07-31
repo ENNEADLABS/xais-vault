@@ -214,7 +214,7 @@ function createWrapper() {
   );
 }
 
-const { result } = renderHook(() => useDeals(), { wrapper: createWrapper() });
+const { result } = renderHook(() => useWorkspaces(), { wrapper: createWrapper() });
 ```
 
 ### Simulation SSE
@@ -256,4 +256,5 @@ cd apps/web && ./node_modules/.bin/vitest run
 
 `.github/workflows/ci.yml` :
 - Backend : Python 3.12, `pytest` avec `--cov` minimum 60%
-- Frontend : Node 22, `npm run build` (validation du build)
+- Frontend : Node 24, `npm ci`, lint, Vitest, audit npm et build
+- Infrastructure : validation de `docker compose config`

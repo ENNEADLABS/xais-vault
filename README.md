@@ -2,7 +2,7 @@
 
 > Document intelligence for knowledge professionals — researchers, lawyers, consultants, journalists, PMs, students, and PE/VC/M&A analysts.
 
-> **Project status:** public source snapshot for learning and experimentation. No hosted instance is currently operated; run it locally with your own infrastructure and credentials.
+> **Project status:** public educational snapshot for learning and experimentation. It is not a hosted service and is not actively maintained or supported. Run it locally with your own infrastructure and credentials.
 
 [![CI](https://github.com/ENNEADLABS/xais-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/ENNEADLABS/xais-vault/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
@@ -34,7 +34,7 @@
 | AI — Analysis | Claude (Anthropic) |
 | AI — Retrieval | Gemini Embedding 2 (Google) |
 | AI — Research | Tavily Web Search |
-| Infrastructure | Render |
+| Local runtime | Docker Compose + Supabase CLI |
 
 ---
 
@@ -73,15 +73,25 @@ graph LR
 
 ## Quick Start
 
+Prerequisites: Docker, the Supabase CLI, PostgreSQL client tools (`psql`), and API keys for Anthropic, Google, and Tavily.
+
 ```bash
 git clone https://github.com/ENNEADLABS/xais-vault.git
 cd xais-vault
-cp .env.example .env          # Fill in your API keys
-pip install -r requirements.txt
-docker compose up
+
+supabase start
+./scripts/bootstrap-database.sh
+
+cp .env.example .env
+# Copy the local keys printed by `supabase status` into .env,
+# then add your Anthropic, Google, and Tavily keys.
+
+docker compose up --build
 ```
 
-The API will be available at `http://localhost:8000/docs`.
+Open the app at `http://localhost:3000`, the API docs at `http://localhost:8000/docs`, and Supabase Studio at `http://localhost:55323`.
+
+For native development and troubleshooting, see [Getting Started](docs/getting-started.md).
 
 ---
 
@@ -142,7 +152,7 @@ ruff check .
 cd apps/web && npm run build
 ```
 
-Backend: **993 tests** (pytest). Frontend: **406 tests** (vitest). CI enforces **60%** coverage.
+The snapshot includes extensive pytest and Vitest suites. CI enforces **60%** backend coverage and runs frontend lint, tests, build, and dependency audit.
 
 ---
 

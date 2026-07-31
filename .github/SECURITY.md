@@ -1,8 +1,8 @@
 # Security Policy
 
-## Supported version
+## Support status
 
-Security fixes are applied to the latest revision of the default branch.
+This repository is an educational snapshot and has no supported release or guaranteed maintenance window. Reports are welcome, but acknowledgement and fixes are best-effort with no response SLA.
 
 ## Reporting a vulnerability
 
@@ -17,5 +17,5 @@ Use GitHub's private vulnerability reporting flow:
 3. Choose **Report a vulnerability**.
 
 Include the affected component, reproduction steps, impact, and any suggested
-mitigation. The maintainers will acknowledge the report and coordinate
-disclosure after a fix is available.
+mitigation. Please allow the maintainers time to assess the report before any
+public disclosure.
