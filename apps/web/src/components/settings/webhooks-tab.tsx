@@ -10,11 +10,7 @@ import { WebhookRow } from "./webhook-row";
 import { CreateWebhookDialog } from "./create-webhook-dialog";
 import { WebhookSecretDialog } from "./webhook-secret-dialog";
 
-interface WebhooksTabProps {
-  orgId: string;
-}
-
-export function WebhooksTab({ orgId: _orgId }: WebhooksTabProps) {
+export function WebhooksTab() {
   const t = useTranslations("settings");
   const { data, isLoading } = useWebhooks();
   const [createOpen, setCreateOpen] = useState(false);

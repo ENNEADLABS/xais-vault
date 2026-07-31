@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -39,13 +39,13 @@ export function InviteMemberDialog({
   const t = useTranslations("settings");
   const inviteMember = useInviteMember(orgId);
 
-  const { register, handleSubmit, setValue, watch, reset, formState: { errors } } =
+  const { control, register, handleSubmit, setValue, reset, formState: { errors } } =
     useForm<InviteMemberFormData>({
       resolver: zodResolver(inviteMemberSchema),
       defaultValues: { email: "", role: "analyst" },
     });
 
-  const role = watch("role");
+  const role = useWatch({ control, name: "role" });
 
   async function onSubmit(data: InviteMemberFormData) {
     try {

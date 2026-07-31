@@ -23,6 +23,8 @@ const SEVERITY_ORDER: Record<Insight["severity"], number> = {
   low: 3,
 };
 
+const EMPTY_INSIGHTS: Insight[] = [];
+
 function sortInsights(insights: Insight[], sortBy: SortKey): Insight[] {
   const sorted = [...insights];
   switch (sortBy) {
@@ -55,7 +57,7 @@ export function ScanTab({ workspaceId }: ScanTabProps) {
   const [filters, setFilters] = useState<InsightsFilters>({});
   const [sortBy, setSortBy] = useState<SortKey>("severity");
   const { data, isLoading } = useInsights(workspaceId, filters);
-  const insights = data?.data ?? [];
+  const insights = data?.data ?? EMPTY_INSIGHTS;
 
   const sortedInsights = useMemo(
     () => sortInsights(insights, sortBy),

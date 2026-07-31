@@ -10,11 +10,7 @@ import { ApiKeyRow } from "./api-key-row";
 import { CreateApiKeyDialog } from "./create-api-key-dialog";
 import { ApiKeySecretDialog } from "./api-key-secret-dialog";
 
-interface ApiKeysTabProps {
-  orgId: string;
-}
-
-export function ApiKeysTab({ orgId: _orgId }: ApiKeysTabProps) {
+export function ApiKeysTab() {
   const t = useTranslations("settings");
   const { data, isLoading } = useApiKeys();
   const [createOpen, setCreateOpen] = useState(false);

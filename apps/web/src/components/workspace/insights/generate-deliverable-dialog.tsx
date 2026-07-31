@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -55,9 +55,9 @@ export function GenerateDeliverableDialog({
 
   const {
     register,
+    control,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors },
   } = useForm<GenerateDeliverableFormData>({
     resolver: zodResolver(generateDeliverableSchema),
@@ -67,7 +67,7 @@ export function GenerateDeliverableDialog({
     },
   });
 
-  const type = watch("type");
+  const type = useWatch({ control, name: "type" });
 
   useEffect(() => {
     setValue("name", `${TYPE_DEFAULT_NAMES[type]} — ${dealName}`);

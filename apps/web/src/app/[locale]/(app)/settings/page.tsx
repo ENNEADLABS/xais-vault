@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { SettingsTabs } from "@/components/settings/settings-tabs";
 
 export default async function SettingsPage({
@@ -8,8 +8,6 @@ export default async function SettingsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("settings");
-
   return (
     <div className="flex h-full min-h-0">
       <SettingsTabs />

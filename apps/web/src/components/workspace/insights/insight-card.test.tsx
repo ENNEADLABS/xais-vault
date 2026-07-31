@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { screen, fireEvent } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { renderWithProviders } from "@/tests/render";
 import { InsightCard } from "./insight-card";
 import type { Insight } from "@/types/api";

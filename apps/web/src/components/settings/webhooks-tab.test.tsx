@@ -41,7 +41,7 @@ describe("WebhooksTab", () => {
   it("affiche le skeleton en cours de chargement", () => {
     vi.mocked(useWebhooks).mockReturnValue(mockQueryLoading<WebhooksResult>());
 
-    const { container } = renderWithProviders(<WebhooksTab orgId="org-1" />);
+    const { container } = renderWithProviders(<WebhooksTab />);
     const skeletons = container.querySelectorAll('[data-slot="skeleton"]');
     expect(skeletons.length).toBeGreaterThan(0);
   });
@@ -51,7 +51,7 @@ describe("WebhooksTab", () => {
       mockQuerySuccess<WebhooksResult>({ data: [], total: 0, page: 1, per_page: 20, pages: 0 }),
     );
 
-    renderWithProviders(<WebhooksTab orgId="org-1" />);
+    renderWithProviders(<WebhooksTab />);
     expect(screen.getByText("webhooks.noWebhooks")).toBeInTheDocument();
     expect(screen.getByText("webhooks.noWebhooksHint")).toBeInTheDocument();
   });
@@ -61,7 +61,7 @@ describe("WebhooksTab", () => {
       mockQuerySuccess<WebhooksResult>({ data: [WEBHOOK], total: 1, page: 1, per_page: 20, pages: 1 }),
     );
 
-    renderWithProviders(<WebhooksTab orgId="org-1" />);
+    renderWithProviders(<WebhooksTab />);
     expect(screen.getByText("https://example.com/hook")).toBeInTheDocument();
   });
 
@@ -70,7 +70,7 @@ describe("WebhooksTab", () => {
       mockQuerySuccess<WebhooksResult>({ data: [], total: 0, page: 1, per_page: 20, pages: 0 }),
     );
 
-    renderWithProviders(<WebhooksTab orgId="org-1" />);
+    renderWithProviders(<WebhooksTab />);
     expect(screen.getByText("webhooks.create")).toBeInTheDocument();
   });
 
@@ -79,7 +79,7 @@ describe("WebhooksTab", () => {
       mockQuerySuccess<WebhooksResult>({ data: [], total: 0, page: 1, per_page: 20, pages: 0 }),
     );
 
-    renderWithProviders(<WebhooksTab orgId="org-1" />);
+    renderWithProviders(<WebhooksTab />);
     const createBtn = screen.getByText("webhooks.create");
     fireEvent.click(createBtn);
     expect(screen.getByLabelText("webhooks.urlLabel")).toBeInTheDocument();
@@ -90,7 +90,7 @@ describe("WebhooksTab", () => {
       mockQuerySuccess<WebhooksResult>({ data: [WEBHOOK], total: 1, page: 1, per_page: 20, pages: 1 }),
     );
 
-    renderWithProviders(<WebhooksTab orgId="org-1" />);
+    renderWithProviders(<WebhooksTab />);
     expect(screen.getByText("Scan completed")).toBeInTheDocument();
     expect(screen.getByText("Insight created")).toBeInTheDocument();
   });

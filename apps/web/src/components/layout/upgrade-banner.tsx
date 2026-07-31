@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 export function UpgradeBanner() {
   const t = useTranslations("common");
   const [dismissed, setDismissed] = useState(false);
+  const [now] = useState(() => Date.now());
   const { data } = useBillingStatus();
   const checkout = useCreateCheckout();
 
@@ -34,12 +35,7 @@ export function UpgradeBanner() {
   const trialExpiringSoon =
     plan === "trial" &&
     trial_ends_at !== null &&
-    (() => {
-      const daysLeft = Math.ceil(
-        (new Date(trial_ends_at).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-      );
-      return daysLeft >= 0 && daysLeft <= 3;
-    })();
+    isTrialExpiringSoon(trial_ends_at, now);
 
   const shouldShow = workspacesNearLimit || analysesNearLimit || trialExpiringSoon;
   if (!shouldShow) return null;
@@ -93,4 +89,11 @@ export function UpgradeBanner() {
       </div>
     </div>
   );
+}
+
+export function isTrialExpiringSoon(trialEndsAt: string, now: number): boolean {
+  const daysLeft = Math.ceil(
+    (new Date(trialEndsAt).getTime() - now) / (1000 * 60 * 60 * 24),
+  );
+  return daysLeft >= 0 && daysLeft <= 3;
 }

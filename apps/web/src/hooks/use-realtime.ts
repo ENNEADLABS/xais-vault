@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useEffectEvent } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { RealtimeChannel } from "@supabase/supabase-js";
 
@@ -26,11 +26,9 @@ export function useRealtime({
   onEvent,
   enabled = true,
 }: UseRealtimeOptions) {
-  // Ref stable pour le callback — évite les re-subscribe inutiles
-  const onEventRef = useRef(onEvent);
-  onEventRef.current = onEvent;
+  const handleEvent = useEffectEvent(onEvent);
+  const eventKey = events.join(",");
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!enabled) return;
 
@@ -39,7 +37,7 @@ export function useRealtime({
 
     let channel: RealtimeChannel = supabase.channel(channelName);
 
-    for (const event of events) {
+    for (const event of eventKey.split(",") as PostgresEvent[]) {
       channel = channel.on(
         "postgres_changes",
         {
@@ -49,7 +47,7 @@ export function useRealtime({
           ...(filter ? { filter } : {}),
         },
         () => {
-          onEventRef.current();
+          handleEvent();
         },
       );
     }
@@ -59,5 +57,5 @@ export function useRealtime({
     return () => {
       void supabase.removeChannel(channel);
     };
-  }, [table, filter, enabled, events.join(",")]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [table, filter, enabled, eventKey]);
 }
