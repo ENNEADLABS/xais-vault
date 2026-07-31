@@ -97,8 +97,8 @@ alter table public.usage_logs       rename constraint usage_logs_deal_id_fkey   
 
 -- ─── 6. Rename des RLS policies ────────────────────────────
 
-alter policy "Users can access deals in their organizations" on public.workspaces
-  rename to "Users can access workspaces in their organizations";
+alter policy "Users can view deals in their organizations" on public.workspaces
+  rename to "Users can view workspaces in their organizations";
 
 alter policy "Users can access findings in their organizations" on public.insights
   rename to "Users can access insights in their organizations";
