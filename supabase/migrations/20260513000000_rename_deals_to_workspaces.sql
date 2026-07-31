@@ -1,5 +1,5 @@
 -- Phase 3.A — Pivot généraliste : rename deals→workspaces, findings→insights
--- Spec : specs/todo/02-pivot-generaliste-phase3.md
+-- Migration du domaine deals vers le domaine générique workspaces.
 --
 -- Renames :
 --   * tables : deals → workspaces, findings → insights

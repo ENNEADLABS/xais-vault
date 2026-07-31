@@ -885,7 +885,7 @@
       "sections": {
         "definitions": {
           "title": "Définitions",
-          "content": "« Service » désigne la plateforme XAIS Vault accessible à l'adresse xais-vault.vercel.app. « Utilisateur » désigne toute personne physique disposant d'un compte. « Organisation » désigne l'entité (entreprise, cabinet, fonds) regroupant plusieurs utilisateurs. « Contenu » désigne tout document, fichier ou donnée uploadé par l'utilisateur. « Plan » désigne la formule d'abonnement souscrite."
+          "content": "« Service » désigne l'application XAIS Vault déployée. « Utilisateur » désigne toute personne physique disposant d'un compte. « Organisation » désigne l'entité (entreprise, cabinet, fonds) regroupant plusieurs utilisateurs. « Contenu » désigne tout document, fichier ou donnée uploadé par l'utilisateur. « Plan » désigne la formule d'abonnement souscrite."
         },
         "object": {
           "title": "Objet du service",
@@ -927,11 +927,11 @@
       "sections": {
         "editor": {
           "title": "Éditeur du site",
-          "content": "Le site xais-vault.vercel.app est édité par XAIS SOLUCES, domiciliée à Saint-Raphaël, Var, France. Direction de la publication : XAIS SOLUCES (contact@xaisoluces.com). Les informations légales complémentaires (numéro SIRET, forme juridique) sont disponibles sur demande à contact@xaisoluces.com."
+          "content": "Ce dépôt public est un instantané du code source et n'est actuellement pas exploité comme un service hébergé. Tout opérateur d'un déploiement doit publier les mentions légales applicables à son instance."
         },
         "hosting": {
           "title": "Hébergement",
-          "content": "Frontend : Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA (vercel.com). API et Worker : Render Inc., 525 Brannan Street Suite 300, San Francisco, CA 94107, USA (render.com). Base de données : Supabase Inc., 970 Toa Payoh North, Singapore (supabase.com), données hébergées dans la région Europe (eu-central-1)."
+          "content": "L'hébergement dépend de l'infrastructure choisie par l'opérateur du déploiement. Cette mention doit être vérifiée et adaptée avant d'exposer une instance à des utilisateurs."
         },
         "intellectualProperty": {
           "title": "Propriété intellectuelle",

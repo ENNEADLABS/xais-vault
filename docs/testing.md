@@ -244,7 +244,7 @@ function sseLines(event: string, data: Record<string, unknown>): string {
 | Backend (pytest) | 993 tests | 60% |
 | Frontend (vitest) | 406 tests, 53 fichiers | - |
 
-### Piège connu (handoff 049)
+### Piège connu
 
 `npx vitest` peut résoudre une version cached (4.1.6) qui ne charge plus jsdom (`ReferenceError: document is not defined` sur tous les tests qui montent un composant). Utiliser le binaire local explicite si la suite échoue mass :
 

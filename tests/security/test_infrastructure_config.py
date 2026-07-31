@@ -28,7 +28,7 @@ def _make_app(environment: str = "development", health_secret: str | None = None
         anthropic_api_key="sk-ant-fake",
         google_api_key="fake",
         tavily_api_key="fake",
-        frontend_url="https://xais-vault.vercel.app",
+        frontend_url="https://app.example.com",
         environment=environment,
         debug=(environment == "development"),
         admin_user_ids=[],
